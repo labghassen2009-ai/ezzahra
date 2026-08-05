@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ezzahra — Cuisine tunisienne & fast-food halal à Bordeaux</title>
+<meta name="description" content="Ezzahra, restaurant halal à Bordeaux St-Jean : couscous, tacos, sandwichs, pâtisseries orientales. Ouvert tard, à 2 minutes de la gare.">
+<link rel="icon" href="favicon-32.png" sizes="32x32">
+<link rel="icon" href="favicon-512.png" sizes="512x512">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="canonical" href="https://www.ezzahra-bordeaux.fr/index.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Ezzahra — Cuisine tunisienne & fast-food halal à Bordeaux">
+<meta property="og:description" content="Ezzahra, restaurant halal à Bordeaux St-Jean : couscous, tacos, sandwichs, pâtisseries orientales. Ouvert tard, à 2 minutes de la gare.">
+<meta property="og:image" content="hero-food.jpg">
+<meta property="og:url" content="https://www.ezzahra-bordeaux.fr/index.html">
+<meta property="og:locale" content="fr_FR">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Ezzahra — Cuisine tunisienne & fast-food halal à Bordeaux">
+<meta name="twitter:description" content="Ezzahra, restaurant halal à Bordeaux St-Jean : couscous, tacos, sandwichs, pâtisseries orientales. Ouvert tard, à 2 minutes de la gare.">
+<meta name="twitter:image" content="hero-food.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,500&family=IBM+Plex+Mono:wght@400;500;600&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="hero-food.jpg">
+<link rel="stylesheet" href="style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  "name": "Ezzahra",
+  "servesCuisine": ["Tunisian", "Halal", "Fast Food"],
+  "priceRange": "€€",
+  "telephone": "+33556929118",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "236 Cours de la Marne",
+    "addressLocality": "Bordeaux",
+    "postalCode": "33800",
+    "addressCountry": "FR"
+  },
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+    "opens": "10:00",
+    "closes": "01:00"
+  },
+  "url": "https://www.ezzahra-bordeaux.fr/index.html",
+  "image": "https://www.ezzahra-bordeaux.fr/hero-food.jpg",
+  "menu": "https://www.ezzahra-bordeaux.fr/menu.html"
+}
+</script>
+</head>
+<body>
+
+<div class="entry-gate" id="entryGate" style="background-image:url('hero-food.jpg');">
+  <div class="entry-gate-card">
+    <p class="entry-gate-brand">Ezzahra</p>
+    <h2 class="entry-gate-title">Bienvenue chez Ezzahra</h2>
+    <p class="entry-gate-sub">Dites-nous d'où vous venez avant d'entrer — le reste est facultatif.</p>
+
+    <form id="gateForm" novalidate>
+      <div class="form-row">
+        <label class="form-label" for="gateCountryBtn">Pays de résidence <span class="req">*</span></label>
+        <div class="cselect" id="gateCountrySelect">
+          <button type="button" class="cselect-btn" id="gateCountryBtn" aria-haspopup="listbox" aria-expanded="false">
+            <span class="cselect-btn-label"><span class="cselect-placeholder">Sélectionnez votre pays</span></span>
+            <svg class="cselect-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <ul class="cselect-list" role="listbox" tabindex="-1">
+              <li role="option" data-value="France" tabindex="-1"><img src="https://flagcdn.com/24x18/fr.png" srcset="https://flagcdn.com/48x36/fr.png 2x" width="24" height="18" alt=""><span>France</span></li>
+              <li role="option" data-value="Tunisie" tabindex="-1"><img src="https://flagcdn.com/24x18/tn.png" srcset="https://flagcdn.com/48x36/tn.png 2x" width="24" height="18" alt=""><span>Tunisie</span></li>
+              <li role="option" data-value="Algérie" tabindex="-1"><img src="https://flagcdn.com/24x18/dz.png" srcset="https://flagcdn.com/48x36/dz.png 2x" width="24" height="18" alt=""><span>Algérie</span></li>
+              <li role="option" data-value="Maroc" tabindex="-1"><img src="https://flagcdn.com/24x18/ma.png" srcset="https://flagcdn.com/48x36/ma.png 2x" width="24" height="18" alt=""><span>Maroc</span></li>
+              <li role="option" data-value="Libye" tabindex="-1"><img src="https://flagcdn.com/24x18/ly.png" srcset="https://flagcdn.com/48x36/ly.png 2x" width="24" height="18" alt=""><span>Libye</span></li>
+              <li role="option" data-value="Égypte" tabindex="-1"><img src="https://flagcdn.com/24x18/eg.png" srcset="https://flagcdn.com/48x36/eg.png 2x" width="24" height="18" alt=""><span>Égypte</span></li>
+              <li role="option" data-value="Mauritanie" tabindex="-1"><img src="https://flagcdn.com/24x18/mr.png" srcset="https://flagcdn.com/48x36/mr.png 2x" width="24" height="18" alt=""><span>Mauritanie</span></li>
+              <li role="option" data-value="Soudan" tabindex="-1"><img src="https://flagcdn.com/24x18/sd.png" srcset="https://flagcdn.com/48x36/sd.png 2x" width="24" height="18" alt=""><span>Soudan</span></li>
+              <li role="option" data-value="Belgique" tabindex="-1"><img src="https://flagcdn.com/24x18/be.png" srcset="https://flagcdn.com/48x36/be.png 2x" width="24" height="18" alt=""><span>Belgique</span></li>
+              <li role="option" data-value="Suisse" tabindex="-1"><img src="https://flagcdn.com/24x18/ch.png" srcset="https://flagcdn.com/48x36/ch.png 2x" width="24" height="18" alt=""><span>Suisse</span></li>
+              <li role="option" data-value="Luxembourg" tabindex="-1"><img src="https://flagcdn.com/24x18/lu.png" srcset="https://flagcdn.com/48x36/lu.png 2x" width="24" height="18" alt=""><span>Luxembourg</span></li>
+              <li role="option" data-value="Allemagne" tabindex="-1"><img src="https://flagcdn.com/24x18/de.png" srcset="https://flagcdn.com/48x36/de.png 2x" width="24" height="18" alt=""><span>Allemagne</span></li>
+              <li role="option" data-value="Espagne" tabindex="-1"><img src="https://flagcdn.com/24x18/es.png" srcset="https://flagcdn.com/48x36/es.png 2x" width="24" height="18" alt=""><span>Espagne</span></li>
+              <li role="option" data-value="Italie" tabindex="-1"><img src="https://flagcdn.com/24x18/it.png" srcset="https://flagcdn.com/48x36/it.png 2x" width="24" height="18" alt=""><span>Italie</span></li>
+              <li role="option" data-value="Portugal" tabindex="-1"><img src="https://flagcdn.com/24x18/pt.png" srcset="https://flagcdn.com/48x36/pt.png 2x" width="24" height="18" alt=""><span>Portugal</span></li>
+              <li role="option" data-value="Royaume-Uni" tabindex="-1"><img src="https://flagcdn.com/24x18/gb.png" srcset="https://flagcdn.com/48x36/gb.png 2x" width="24" height="18" alt=""><span>Royaume-Uni</span></li>
+              <li role="option" data-value="Irlande" tabindex="-1"><img src="https://flagcdn.com/24x18/ie.png" srcset="https://flagcdn.com/48x36/ie.png 2x" width="24" height="18" alt=""><span>Irlande</span></li>
+              <li role="option" data-value="Pays-Bas" tabindex="-1"><img src="https://flagcdn.com/24x18/nl.png" srcset="https://flagcdn.com/48x36/nl.png 2x" width="24" height="18" alt=""><span>Pays-Bas</span></li>
+              <li role="option" data-value="Autriche" tabindex="-1"><img src="https://flagcdn.com/24x18/at.png" srcset="https://flagcdn.com/48x36/at.png 2x" width="24" height="18" alt=""><span>Autriche</span></li>
+              <li role="option" data-value="Pologne" tabindex="-1"><img src="https://flagcdn.com/24x18/pl.png" srcset="https://flagcdn.com/48x36/pl.png 2x" width="24" height="18" alt=""><span>Pologne</span></li>
+              <li role="option" data-value="Roumanie" tabindex="-1"><img src="https://flagcdn.com/24x18/ro.png" srcset="https://flagcdn.com/48x36/ro.png 2x" width="24" height="18" alt=""><span>Roumanie</span></li>
+              <li role="option" data-value="Grèce" tabindex="-1"><img src="https://flagcdn.com/24x18/gr.png" srcset="https://flagcdn.com/48x36/gr.png 2x" width="24" height="18" alt=""><span>Grèce</span></li>
+              <li role="option" data-value="Suède" tabindex="-1"><img src="https://flagcdn.com/24x18/se.png" srcset="https://flagcdn.com/48x36/se.png 2x" width="24" height="18" alt=""><span>Suède</span></li>
+              <li role="option" data-value="Norvège" tabindex="-1"><img src="https://flagcdn.com/24x18/no.png" srcset="https://flagcdn.com/48x36/no.png 2x" width="24" height="18" alt=""><span>Norvège</span></li>
+              <li role="option" data-value="Danemark" tabindex="-1"><img src="https://flagcdn.com/24x18/dk.png" srcset="https://flagcdn.com/48x36/dk.png 2x" width="24" height="18" alt=""><span>Danemark</span></li>
+              <li role="option" data-value="Finlande" tabindex="-1"><img src="https://flagcdn.com/24x18/fi.png" srcset="https://flagcdn.com/48x36/fi.png 2x" width="24" height="18" alt=""><span>Finlande</span></li>
+              <li role="option" data-value="Islande" tabindex="-1"><img src="https://flagcdn.com/24x18/is.png" srcset="https://flagcdn.com/48x36/is.png 2x" width="24" height="18" alt=""><span>Islande</span></li>
+              <li role="option" data-value="Tchéquie" tabindex="-1"><img src="https://flagcdn.com/24x18/cz.png" srcset="https://flagcdn.com/48x36/cz.png 2x" width="24" height="18" alt=""><span>Tchéquie</span></li>
+              <li role="option" data-value="Slovaquie" tabindex="-1"><img src="https://flagcdn.com/24x18/sk.png" srcset="https://flagcdn.com/48x36/sk.png 2x" width="24" height="18" alt=""><span>Slovaquie</span></li>
+              <li role="option" data-value="Hongrie" tabindex="-1"><img src="https://flagcdn.com/24x18/hu.png" srcset="https://flagcdn.com/48x36/hu.png 2x" width="24" height="18" alt=""><span>Hongrie</span></li>
+              <li role="option" data-value="Bulgarie" tabindex="-1"><img src="https://flagcdn.com/24x18/bg.png" srcset="https://flagcdn.com/48x36/bg.png 2x" width="24" height="18" alt=""><span>Bulgarie</span></li>
+              <li role="option" data-value="Croatie" tabindex="-1"><img src="https://flagcdn.com/24x18/hr.png" srcset="https://flagcdn.com/48x36/hr.png 2x" width="24" height="18" alt=""><span>Croatie</span></li>
+              <li role="option" data-value="Serbie" tabindex="-1"><img src="https://flagcdn.com/24x18/rs.png" srcset="https://flagcdn.com/48x36/rs.png 2x" width="24" height="18" alt=""><span>Serbie</span></li>
+              <li role="option" data-value="Ukraine" tabindex="-1"><img src="https://flagcdn.com/24x18/ua.png" srcset="https://flagcdn.com/48x36/ua.png 2x" width="24" height="18" alt=""><span>Ukraine</span></li>
+              <li role="option" data-value="Russie" tabindex="-1"><img src="https://flagcdn.com/24x18/ru.png" srcset="https://flagcdn.com/48x36/ru.png 2x" width="24" height="18" alt=""><span>Russie</span></li>
+              <li role="option" data-value="Biélorussie" tabindex="-1"><img src="https://flagcdn.com/24x18/by.png" srcset="https://flagcdn.com/48x36/by.png 2x" width="24" height="18" alt=""><span>Biélorussie</span></li>
+              <li role="option" data-value="Malte" tabindex="-1"><img src="https://flagcdn.com/24x18/mt.png" srcset="https://flagcdn.com/48x36/mt.png 2x" width="24" height="18" alt=""><span>Malte</span></li>
+              <li role="option" data-value="Chypre" tabindex="-1"><img src="https://flagcdn.com/24x18/cy.png" srcset="https://flagcdn.com/48x36/cy.png 2x" width="24" height="18" alt=""><span>Chypre</span></li>
+              <li role="option" data-value="Albanie" tabindex="-1"><img src="https://flagcdn.com/24x18/al.png" srcset="https://flagcdn.com/48x36/al.png 2x" width="24" height="18" alt=""><span>Albanie</span></li>
+              <li role="option" data-value="Bosnie-Herzégovine" tabindex="-1"><img src="https://flagcdn.com/24x18/ba.png" srcset="https://flagcdn.com/48x36/ba.png 2x" width="24" height="18" alt=""><span>Bosnie-Herzégovine</span></li>
+              <li role="option" data-value="Macédoine du Nord" tabindex="-1"><img src="https://flagcdn.com/24x18/mk.png" srcset="https://flagcdn.com/48x36/mk.png 2x" width="24" height="18" alt=""><span>Macédoine du Nord</span></li>
+              <li role="option" data-value="Monténégro" tabindex="-1"><img src="https://flagcdn.com/24x18/me.png" srcset="https://flagcdn.com/48x36/me.png 2x" width="24" height="18" alt=""><span>Monténégro</span></li>
+              <li role="option" data-value="Slovénie" tabindex="-1"><img src="https://flagcdn.com/24x18/si.png" srcset="https://flagcdn.com/48x36/si.png 2x" width="24" height="18" alt=""><span>Slovénie</span></li>
+              <li role="option" data-value="Estonie" tabindex="-1"><img src="https://flagcdn.com/24x18/ee.png" srcset="https://flagcdn.com/48x36/ee.png 2x" width="24" height="18" alt=""><span>Estonie</span></li>
+              <li role="option" data-value="Lettonie" tabindex="-1"><img src="https://flagcdn.com/24x18/lv.png" srcset="https://flagcdn.com/48x36/lv.png 2x" width="24" height="18" alt=""><span>Lettonie</span></li>
+              <li role="option" data-value="Lituanie" tabindex="-1"><img src="https://flagcdn.com/24x18/lt.png" srcset="https://flagcdn.com/48x36/lt.png 2x" width="24" height="18" alt=""><span>Lituanie</span></li>
+              <li role="option" data-value="Moldavie" tabindex="-1"><img src="https://flagcdn.com/24x18/md.png" srcset="https://flagcdn.com/48x36/md.png 2x" width="24" height="18" alt=""><span>Moldavie</span></li>
+              <li role="option" data-value="Monaco" tabindex="-1"><img src="https://flagcdn.com/24x18/mc.png" srcset="https://flagcdn.com/48x36/mc.png 2x" width="24" height="18" alt=""><span>Monaco</span></li>
+              <li role="option" data-value="Andorre" tabindex="-1"><img src="https://flagcdn.com/24x18/ad.png" srcset="https://flagcdn.com/48x36/ad.png 2x" width="24" height="18" alt=""><span>Andorre</span></li>
+              <li role="option" data-value="Sénégal" tabindex="-1"><img src="https://flagcdn.com/24x18/sn.png" srcset="https://flagcdn.com/48x36/sn.png 2x" width="24" height="18" alt=""><span>Sénégal</span></li>
+              <li role="option" data-value="Côte d'Ivoire" tabindex="-1"><img src="https://flagcdn.com/24x18/ci.png" srcset="https://flagcdn.com/48x36/ci.png 2x" width="24" height="18" alt=""><span>Côte d'Ivoire</span></li>
+              <li role="option" data-value="Mali" tabindex="-1"><img src="https://flagcdn.com/24x18/ml.png" srcset="https://flagcdn.com/48x36/ml.png 2x" width="24" height="18" alt=""><span>Mali</span></li>
+              <li role="option" data-value="Cameroun" tabindex="-1"><img src="https://flagcdn.com/24x18/cm.png" srcset="https://flagcdn.com/48x36/cm.png 2x" width="24" height="18" alt=""><span>Cameroun</span></li>
+              <li role="option" data-value="Niger" tabindex="-1"><img src="https://flagcdn.com/24x18/ne.png" srcset="https://flagcdn.com/48x36/ne.png 2x" width="24" height="18" alt=""><span>Niger</span></li>
+              <li role="option" data-value="Tchad" tabindex="-1"><img src="https://flagcdn.com/24x18/td.png" srcset="https://flagcdn.com/48x36/td.png 2x" width="24" height="18" alt=""><span>Tchad</span></li>
+              <li role="option" data-value="Guinée" tabindex="-1"><img src="https://flagcdn.com/24x18/gn.png" srcset="https://flagcdn.com/48x36/gn.png 2x" width="24" height="18" alt=""><span>Guinée</span></li>
+              <li role="option" data-value="Burkina Faso" tabindex="-1"><img src="https://flagcdn.com/24x18/bf.png" srcset="https://flagcdn.com/48x36/bf.png 2x" width="24" height="18" alt=""><span>Burkina Faso</span></li>
+              <li role="option" data-value="Togo" tabindex="-1"><img src="https://flagcdn.com/24x18/tg.png" srcset="https://flagcdn.com/48x36/tg.png 2x" width="24" height="18" alt=""><span>Togo</span></li>
+              <li role="option" data-value="Bénin" tabindex="-1"><img src="https://flagcdn.com/24x18/bj.png" srcset="https://flagcdn.com/48x36/bj.png 2x" width="24" height="18" alt=""><span>Bénin</span></li>
+              <li role="option" data-value="RD Congo" tabindex="-1"><img src="https://flagcdn.com/24x18/cd.png" srcset="https://flagcdn.com/48x36/cd.png 2x" width="24" height="18" alt=""><span>RD Congo</span></li>
+              <li role="option" data-value="Congo" tabindex="-1"><img src="https://flagcdn.com/24x18/cg.png" srcset="https://flagcdn.com/48x36/cg.png 2x" width="24" height="18" alt=""><span>Congo</span></li>
+              <li role="option" data-value="Gabon" tabindex="-1"><img src="https://flagcdn.com/24x18/ga.png" srcset="https://flagcdn.com/48x36/ga.png 2x" width="24" height="18" alt=""><span>Gabon</span></li>
+              <li role="option" data-value="Madagascar" tabindex="-1"><img src="https://flagcdn.com/24x18/mg.png" srcset="https://flagcdn.com/48x36/mg.png 2x" width="24" height="18" alt=""><span>Madagascar</span></li>
+              <li role="option" data-value="Comores" tabindex="-1"><img src="https://flagcdn.com/24x18/km.png" srcset="https://flagcdn.com/48x36/km.png 2x" width="24" height="18" alt=""><span>Comores</span></li>
+              <li role="option" data-value="Djibouti" tabindex="-1"><img src="https://flagcdn.com/24x18/dj.png" srcset="https://flagcdn.com/48x36/dj.png 2x" width="24" height="18" alt=""><span>Djibouti</span></li>
+              <li role="option" data-value="Ghana" tabindex="-1"><img src="https://flagcdn.com/24x18/gh.png" srcset="https://flagcdn.com/48x36/gh.png 2x" width="24" height="18" alt=""><span>Ghana</span></li>
+              <li role="option" data-value="Nigeria" tabindex="-1"><img src="https://flagcdn.com/24x18/ng.png" srcset="https://flagcdn.com/48x36/ng.png 2x" width="24" height="18" alt=""><span>Nigeria</span></li>
+              <li role="option" data-value="Kenya" tabindex="-1"><img src="https://flagcdn.com/24x18/ke.png" srcset="https://flagcdn.com/48x36/ke.png 2x" width="24" height="18" alt=""><span>Kenya</span></li>
+              <li role="option" data-value="Éthiopie" tabindex="-1"><img src="https://flagcdn.com/24x18/et.png" srcset="https://flagcdn.com/48x36/et.png 2x" width="24" height="18" alt=""><span>Éthiopie</span></li>
+              <li role="option" data-value="Afrique du Sud" tabindex="-1"><img src="https://flagcdn.com/24x18/za.png" srcset="https://flagcdn.com/48x36/za.png 2x" width="24" height="18" alt=""><span>Afrique du Sud</span></li>
+              <li role="option" data-value="Rwanda" tabindex="-1"><img src="https://flagcdn.com/24x18/rw.png" srcset="https://flagcdn.com/48x36/rw.png 2x" width="24" height="18" alt=""><span>Rwanda</span></li>
+              <li role="option" data-value="Cap-Vert" tabindex="-1"><img src="https://flagcdn.com/24x18/cv.png" srcset="https://flagcdn.com/48x36/cv.png 2x" width="24" height="18" alt=""><span>Cap-Vert</span></li>
+              <li role="option" data-value="Guinée équatoriale" tabindex="-1"><img src="https://flagcdn.com/24x18/gq.png" srcset="https://flagcdn.com/48x36/gq.png 2x" width="24" height="18" alt=""><span>Guinée équatoriale</span></li>
+              <li role="option" data-value="Maurice" tabindex="-1"><img src="https://flagcdn.com/24x18/mu.png" srcset="https://flagcdn.com/48x36/mu.png 2x" width="24" height="18" alt=""><span>Maurice</span></li>
+              <li role="option" data-value="Seychelles" tabindex="-1"><img src="https://flagcdn.com/24x18/sc.png" srcset="https://flagcdn.com/48x36/sc.png 2x" width="24" height="18" alt=""><span>Seychelles</span></li>
+              <li role="option" data-value="Turquie" tabindex="-1"><img src="https://flagcdn.com/24x18/tr.png" srcset="https://flagcdn.com/48x36/tr.png 2x" width="24" height="18" alt=""><span>Turquie</span></li>
+              <li role="option" data-value="Liban" tabindex="-1"><img src="https://flagcdn.com/24x18/lb.png" srcset="https://flagcdn.com/48x36/lb.png 2x" width="24" height="18" alt=""><span>Liban</span></li>
+              <li role="option" data-value="Syrie" tabindex="-1"><img src="https://flagcdn.com/24x18/sy.png" srcset="https://flagcdn.com/48x36/sy.png 2x" width="24" height="18" alt=""><span>Syrie</span></li>
+              <li role="option" data-value="Arabie saoudite" tabindex="-1"><img src="https://flagcdn.com/24x18/sa.png" srcset="https://flagcdn.com/48x36/sa.png 2x" width="24" height="18" alt=""><span>Arabie saoudite</span></li>
+              <li role="option" data-value="Émirats arabes unis" tabindex="-1"><img src="https://flagcdn.com/24x18/ae.png" srcset="https://flagcdn.com/48x36/ae.png 2x" width="24" height="18" alt=""><span>Émirats arabes unis</span></li>
+              <li role="option" data-value="Qatar" tabindex="-1"><img src="https://flagcdn.com/24x18/qa.png" srcset="https://flagcdn.com/48x36/qa.png 2x" width="24" height="18" alt=""><span>Qatar</span></li>
+              <li role="option" data-value="Koweït" tabindex="-1"><img src="https://flagcdn.com/24x18/kw.png" srcset="https://flagcdn.com/48x36/kw.png 2x" width="24" height="18" alt=""><span>Koweït</span></li>
+              <li role="option" data-value="Oman" tabindex="-1"><img src="https://flagcdn.com/24x18/om.png" srcset="https://flagcdn.com/48x36/om.png 2x" width="24" height="18" alt=""><span>Oman</span></li>
+              <li role="option" data-value="Bahreïn" tabindex="-1"><img src="https://flagcdn.com/24x18/bh.png" srcset="https://flagcdn.com/48x36/bh.png 2x" width="24" height="18" alt=""><span>Bahreïn</span></li>
+              <li role="option" data-value="Irak" tabindex="-1"><img src="https://flagcdn.com/24x18/iq.png" srcset="https://flagcdn.com/48x36/iq.png 2x" width="24" height="18" alt=""><span>Irak</span></li>
+              <li role="option" data-value="Jordanie" tabindex="-1"><img src="https://flagcdn.com/24x18/jo.png" srcset="https://flagcdn.com/48x36/jo.png 2x" width="24" height="18" alt=""><span>Jordanie</span></li>
+              <li role="option" data-value="Palestine" tabindex="-1"><img src="https://flagcdn.com/24x18/ps.png" srcset="https://flagcdn.com/48x36/ps.png 2x" width="24" height="18" alt=""><span>Palestine</span></li>
+              <li role="option" data-value="Yémen" tabindex="-1"><img src="https://flagcdn.com/24x18/ye.png" srcset="https://flagcdn.com/48x36/ye.png 2x" width="24" height="18" alt=""><span>Yémen</span></li>
+              <li role="option" data-value="Iran" tabindex="-1"><img src="https://flagcdn.com/24x18/ir.png" srcset="https://flagcdn.com/48x36/ir.png 2x" width="24" height="18" alt=""><span>Iran</span></li>
+              <li role="option" data-value="Israël" tabindex="-1"><img src="https://flagcdn.com/24x18/il.png" srcset="https://flagcdn.com/48x36/il.png 2x" width="24" height="18" alt=""><span>Israël</span></li>
+              <li role="option" data-value="États-Unis" tabindex="-1"><img src="https://flagcdn.com/24x18/us.png" srcset="https://flagcdn.com/48x36/us.png 2x" width="24" height="18" alt=""><span>États-Unis</span></li>
+              <li role="option" data-value="Canada" tabindex="-1"><img src="https://flagcdn.com/24x18/ca.png" srcset="https://flagcdn.com/48x36/ca.png 2x" width="24" height="18" alt=""><span>Canada</span></li>
+              <li role="option" data-value="Mexique" tabindex="-1"><img src="https://flagcdn.com/24x18/mx.png" srcset="https://flagcdn.com/48x36/mx.png 2x" width="24" height="18" alt=""><span>Mexique</span></li>
+              <li role="option" data-value="Brésil" tabindex="-1"><img src="https://flagcdn.com/24x18/br.png" srcset="https://flagcdn.com/48x36/br.png 2x" width="24" height="18" alt=""><span>Brésil</span></li>
+              <li role="option" data-value="Argentine" tabindex="-1"><img src="https://flagcdn.com/24x18/ar.png" srcset="https://flagcdn.com/48x36/ar.png 2x" width="24" height="18" alt=""><span>Argentine</span></li>
+              <li role="option" data-value="Chili" tabindex="-1"><img src="https://flagcdn.com/24x18/cl.png" srcset="https://flagcdn.com/48x36/cl.png 2x" width="24" height="18" alt=""><span>Chili</span></li>
+              <li role="option" data-value="Colombie" tabindex="-1"><img src="https://flagcdn.com/24x18/co.png" srcset="https://flagcdn.com/48x36/co.png 2x" width="24" height="18" alt=""><span>Colombie</span></li>
+              <li role="option" data-value="Pérou" tabindex="-1"><img src="https://flagcdn.com/24x18/pe.png" srcset="https://flagcdn.com/48x36/pe.png 2x" width="24" height="18" alt=""><span>Pérou</span></li>
+              <li role="option" data-value="Venezuela" tabindex="-1"><img src="https://flagcdn.com/24x18/ve.png" srcset="https://flagcdn.com/48x36/ve.png 2x" width="24" height="18" alt=""><span>Venezuela</span></li>
+              <li role="option" data-value="Cuba" tabindex="-1"><img src="https://flagcdn.com/24x18/cu.png" srcset="https://flagcdn.com/48x36/cu.png 2x" width="24" height="18" alt=""><span>Cuba</span></li>
+              <li role="option" data-value="Haïti" tabindex="-1"><img src="https://flagcdn.com/24x18/ht.png" srcset="https://flagcdn.com/48x36/ht.png 2x" width="24" height="18" alt=""><span>Haïti</span></li>
+              <li role="option" data-value="République dominicaine" tabindex="-1"><img src="https://flagcdn.com/24x18/do.png" srcset="https://flagcdn.com/48x36/do.png 2x" width="24" height="18" alt=""><span>République dominicaine</span></li>
+              <li role="option" data-value="Chine" tabindex="-1"><img src="https://flagcdn.com/24x18/cn.png" srcset="https://flagcdn.com/48x36/cn.png 2x" width="24" height="18" alt=""><span>Chine</span></li>
+              <li role="option" data-value="Japon" tabindex="-1"><img src="https://flagcdn.com/24x18/jp.png" srcset="https://flagcdn.com/48x36/jp.png 2x" width="24" height="18" alt=""><span>Japon</span></li>
+              <li role="option" data-value="Corée du Sud" tabindex="-1"><img src="https://flagcdn.com/24x18/kr.png" srcset="https://flagcdn.com/48x36/kr.png 2x" width="24" height="18" alt=""><span>Corée du Sud</span></li>
+              <li role="option" data-value="Inde" tabindex="-1"><img src="https://flagcdn.com/24x18/in.png" srcset="https://flagcdn.com/48x36/in.png 2x" width="24" height="18" alt=""><span>Inde</span></li>
+              <li role="option" data-value="Pakistan" tabindex="-1"><img src="https://flagcdn.com/24x18/pk.png" srcset="https://flagcdn.com/48x36/pk.png 2x" width="24" height="18" alt=""><span>Pakistan</span></li>
+              <li role="option" data-value="Bangladesh" tabindex="-1"><img src="https://flagcdn.com/24x18/bd.png" srcset="https://flagcdn.com/48x36/bd.png 2x" width="24" height="18" alt=""><span>Bangladesh</span></li>
+              <li role="option" data-value="Indonésie" tabindex="-1"><img src="https://flagcdn.com/24x18/id.png" srcset="https://flagcdn.com/48x36/id.png 2x" width="24" height="18" alt=""><span>Indonésie</span></li>
+              <li role="option" data-value="Malaisie" tabindex="-1"><img src="https://flagcdn.com/24x18/my.png" srcset="https://flagcdn.com/48x36/my.png 2x" width="24" height="18" alt=""><span>Malaisie</span></li>
+              <li role="option" data-value="Singapour" tabindex="-1"><img src="https://flagcdn.com/24x18/sg.png" srcset="https://flagcdn.com/48x36/sg.png 2x" width="24" height="18" alt=""><span>Singapour</span></li>
+              <li role="option" data-value="Thaïlande" tabindex="-1"><img src="https://flagcdn.com/24x18/th.png" srcset="https://flagcdn.com/48x36/th.png 2x" width="24" height="18" alt=""><span>Thaïlande</span></li>
+              <li role="option" data-value="Vietnam" tabindex="-1"><img src="https://flagcdn.com/24x18/vn.png" srcset="https://flagcdn.com/48x36/vn.png 2x" width="24" height="18" alt=""><span>Vietnam</span></li>
+              <li role="option" data-value="Philippines" tabindex="-1"><img src="https://flagcdn.com/24x18/ph.png" srcset="https://flagcdn.com/48x36/ph.png 2x" width="24" height="18" alt=""><span>Philippines</span></li>
+              <li role="option" data-value="Afghanistan" tabindex="-1"><img src="https://flagcdn.com/24x18/af.png" srcset="https://flagcdn.com/48x36/af.png 2x" width="24" height="18" alt=""><span>Afghanistan</span></li>
+              <li role="option" data-value="Kazakhstan" tabindex="-1"><img src="https://flagcdn.com/24x18/kz.png" srcset="https://flagcdn.com/48x36/kz.png 2x" width="24" height="18" alt=""><span>Kazakhstan</span></li>
+              <li role="option" data-value="Australie" tabindex="-1"><img src="https://flagcdn.com/24x18/au.png" srcset="https://flagcdn.com/48x36/au.png 2x" width="24" height="18" alt=""><span>Australie</span></li>
+              <li role="option" data-value="Nouvelle-Zélande" tabindex="-1"><img src="https://flagcdn.com/24x18/nz.png" srcset="https://flagcdn.com/48x36/nz.png 2x" width="24" height="18" alt=""><span>Nouvelle-Zélande</span></li>
+          </ul>
+          <input type="hidden" name="entry.111111111" id="gateCountryValue" required>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <label class="form-label" for="g-region">Wilaya / Région <span class="opt">(optionnel)</span></label>
+        <input class="form-input" id="g-region" name="entry.222222222" type="text" placeholder="Ex. Bordeaux">
+      </div>
+
+      <div class="form-row">
+        <label class="form-label" for="g-fullname">Nom et prénom <span class="opt">(optionnel)</span></label>
+        <input class="form-input" id="g-fullname" name="entry.333333333" type="text" placeholder="Ex. Mohamed Labiadh">
+      </div>
+
+      <div class="form-row">
+        <label class="form-label" for="g-phone">Téléphone <span class="opt">(optionnel)</span></label>
+        <input class="form-input" id="g-phone" name="entry.555555555" type="tel" placeholder="Ex. 05 56 92 91 18">
+      </div>
+
+      <div class="form-row">
+        <label class="form-label" for="g-email">E-mail <span class="opt">(optionnel)</span></label>
+        <input class="form-input" id="g-email" name="entry.666666666" type="email" placeholder="ex. vous@email.com">
+      </div>
+
+      <button type="submit" class="btn btn-primary form-submit">
+        <span>Entrer sur le site</span>
+      </button>
+      <p class="form-feedback" id="gateFeedback" role="status" aria-live="polite"></p>
+      <button type="button" class="entry-gate-skip" id="gateSkip">Continuer sans renseigner mon pays</button>
+    </form>
+  </div>
+</div>
+<script>
+  if (localStorage.getItem('ezzahra_gate_done') === '1') {
+    document.getElementById('entryGate').style.display = 'none';
+  } else {
+    document.body.classList.add('gate-active');
+  }
+</script>
+
+<header class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="brand">Ezzahra</a>
+    <nav class="nav-links" id="navLinks">
+      <a href="index.html" class="is-active">Accueil</a>
+      <a href="menu.html">Menu</a>
+      <a href="galerie.html">Galerie</a>
+      <a href="puzzle.html">Jeu</a>
+      <a href="nous-trouver.html">Nous trouver</a>
+    </nav>
+    <a href="tel:+33556929118" class="btn btn-ghost nav-call">05 56 92 91 18</a>
+    <button class="burger" id="burger" aria-label="Ouvrir le menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero-photo">
+    <div class="hero-bg" data-parallax style="background-image:url('hero-food.jpg');"></div>
+    <div class="hero-photo-content">
+      <div class="flap-badge" id="flapBadge" aria-label="Ouvert de 10h00 à 1h00">
+        <span class="flap-label">OUVERT</span>
+        <span class="flap-time" id="flapTime">10H00 — 01H00</span>
+      </div>
+      <h1 class="hero-title">Le goût de la <em>Tunisie</em>,<br>à deux pas du quai.</h1>
+      <p class="hero-sub">Couscous, tacos, sandwichs et pâtisseries orientales, préparés halal, servis vite — à 2 minutes à pied de la Gare Saint-Jean.</p>
+      <div class="hero-actions">
+        <a href="menu.html" class="btn btn-primary">Voir le menu</a>
+        <a href="tel:+33556929118" class="btn btn-outline">Appeler pour commander</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- TICKER -->
+  <div class="ticker" aria-hidden="true">
+    <div class="ticker-track">
+      <span>100% HALAL</span><span>OUVERT JUSQU'À 1H DU MATIN</span><span>À 2 MIN DE LA GARE SAINT-JEAN</span><span>SUR PLACE · À EMPORTER · LIVRAISON</span>
+      <span>100% HALAL</span><span>OUVERT JUSQU'À 1H DU MATIN</span><span>À 2 MIN DE LA GARE SAINT-JEAN</span><span>SUR PLACE · À EMPORTER · LIVRAISON</span>
+    </div>
+  </div>
+
+  <!-- ABOUT -->
+  <section class="about" id="apropos">
+    <div class="about-inner">
+      <div class="about-door" aria-hidden="true">
+        <div class="door-frame">
+          <div class="door-panel">
+            <div class="door-knocker"></div>
+          </div>
+        </div>
+        <div class="about-photo">
+          <img src="https://images.unsplash.com/photo-1699728088614-7d1d4277414b?auto=format&fit=crop&w=300&q=70" alt="Sandwich Ezzahra fraîchement préparé">
+        </div>
+      </div>
+      <div class="about-text reveal">
+        <p class="eyebrow">L'ADRESSE</p>
+        <h2>Une porte bleue, une table qui vous attend</h2>
+        <p>Chez Ezzahra, la cuisine tunisienne se prépare comme à la maison&nbsp;: épices dosées à la main, viandes halal, semoule roulée avec soin. Ouvert du matin jusque tard dans la nuit, c'est l'adresse des petits-déjeuners pressés comme des dîners de fin de service.</p>
+        <p>Sur place, à emporter, ou en livraison — Ezzahra s'adapte à votre horaire, pas l'inverse.</p>
+        <ul class="about-tags">
+          <li>Cuisine halal</li>
+          <li>Sur place &amp; à emporter</li>
+          <li>Ouvert jusqu'à 1h du matin</li>
+          <li>Paiement titre-restaurant accepté</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section class="features">
+    <div class="features-inner">
+      <h2 class="reveal">Pourquoi Ezzahra</h2>
+      <div class="feature-grid">
+        <div class="feature-card reveal">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M12 2v6M8 4l1 4M16 4l-1 4M6 22c0-4 2.5-7 6-7s6 3 6 7"/><circle cx="12" cy="14" r="1"/></svg>
+          </div>
+          <h3>100% Halal</h3>
+          <p>Viandes sélectionnées et préparées selon les règles halal, du sandwich au couscous royal.</p>
+        </div>
+        <div class="feature-card reveal">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg>
+          </div>
+          <h3>Ouvert jusqu'à 1h</h3>
+          <p>Tous les jours, du petit-déjeuner au dernier service de nuit.</p>
+        </div>
+        <div class="feature-card reveal">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3" y="10" width="18" height="8" rx="1"/><path d="M7 10V7a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v3M8 18v2M16 18v2"/></svg>
+          </div>
+          <h3>À 2 min de la gare</h3>
+          <p>Idéal avant un train ou en rentrant tard — 236 Cours de la Marne, Bordeaux St-Jean.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MENU TEASER -->
+  <section class="teaser">
+    <div class="teaser-inner">
+      <div class="teaser-head reveal">
+        <div>
+          <p class="eyebrow">QUELQUES CLASSIQUES</p>
+          <h2>Un avant-goût de la carte</h2>
+        </div>
+        <a href="menu.html" class="btn btn-outline" style="color:var(--blue-deep);">Voir le menu complet</a>
+      </div>
+      <div class="teaser-grid">
+        <a href="menu.html" class="photo-card reveal">
+          <img src="https://images.unsplash.com/photo-1699728088614-7d1d4277414b?auto=format&fit=crop&w=900&q=70" alt="Sandwich kebab Ezzahra" loading="lazy">
+          <span class="photo-card-label"><span class="dish-name">Sandwich Kebab</span><span class="dish-price">8,00&nbsp;€</span></span>
+        </a>
+        <a href="menu.html" class="photo-card reveal">
+          <img src="https://images.unsplash.com/photo-1778850790390-c1ba244fbc85?auto=format&fit=crop&w=900&q=70" alt="Couscous Royal Ezzahra" loading="lazy">
+          <span class="photo-card-label"><span class="dish-name">Couscous Royal</span><span class="dish-price">18,50&nbsp;€</span></span>
+        </a>
+        <a href="menu.html" class="photo-card reveal">
+          <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=900&q=70" alt="Assiette de grillades Ezzahra" loading="lazy">
+          <span class="photo-card-label"><span class="dish-name">Assiette 2 viandes</span><span class="dish-price">13,00&nbsp;€</span></span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="testimonials">
+    <div class="testimonials-inner">
+      <div class="testimonials-head reveal">
+        <p class="eyebrow">ILS EN PARLENT</p>
+        <h2>Ce que disent nos clients</h2>
+      </div>
+      <div class="testimonial-grid">
+        <div class="testimonial-card reveal">
+          <div class="stars" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.5L22 9.3l-5 4.9 1.2 7.1L12 17.9l-6.2 3.4L7 14.2 2 9.3l7.1-.8L12 2z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.5L22 9.3l-5 4.9 1.2 7.1L12 17.9l-6.2 3.4L7 14.2 2 9.3l7.1-.8L12 2z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.5L22 9.3l-5 4.9 1.2 7.1L12 17.9l-6.2 3.4L7 14.2 2 9.3l7.1-.8L12 2z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.5L22 9.3l-5 4.9 1.2 7.1L12 17.9l-6.2 3.4L7 14.2 2 9.3l7.1-.8L12 2z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.5L22 9.3l-5 4.9 1.2 7.1L12 17.9l-6.2 3.4L7 14.2 2 9.3l7.1-.8L12 2z"/></svg>
+          </div>
+          <p>Accueil chaleureux et personnel toujours souriant — le kebab est généreux et vraiment savoureux.</p>
+          <span class="testimonial-source">Avis client Google</span>
+        </div>
+        <div class="testimonial-card reveal">
+          <div class="stars" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.5L22 9.3l-5 4.9 1.2 7.1L12 17.9l-6.2 3.4L7 14.2 2 9.3l7.1-.8L12 2z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.5L22 9.3l-5 4.9 1.2 7.1L12 17.9l-6.2 3.4L7 14.2 2 9.3l7.1-.8L12 2z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.5L22 9.3l-5 4.9 1.2 7.1L12 17.9l-6.2 3.4L7 14.2 2 9.3l7.1-.8L12 2z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.5L22 9.3l-5 4.9 1.2 7.1L12 17.9l-6.2 3.4L7 14.2 2 9.3l7.1-.8L12 2z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.5L22 9.3l-5 4.9 1.2 7.1L12 17.9l-6.2 3.4L7 14.2 2 9.3l7.1-.8L12 2z"/></svg>
+          </div>
+          <p>Restaurant tenu avec sérieux, très propre, avec une grande salle pour manger sur place.</p>
+          <span class="testimonial-source">Avis client Google</span>
+        </div>
+        <div class="testimonial-card reveal">
+          <div class="stars" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.5L22 9.3l-5 4.9 1.2 7.1L12 17.9l-6.2 3.4L7 14.2 2 9.3l7.1-.8L12 2z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.5L22 9.3l-5 4.9 1.2 7.1L12 17.9l-6.2 3.4L7 14.2 2 9.3l7.1-.8L12 2z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.5L22 9.3l-5 4.9 1.2 7.1L12 17.9l-6.2 3.4L7 14.2 2 9.3l7.1-.8L12 2z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.5L22 9.3l-5 4.9 1.2 7.1L12 17.9l-6.2 3.4L7 14.2 2 9.3l7.1-.8L12 2z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.5L22 9.3l-5 4.9 1.2 7.1L12 17.9l-6.2 3.4L7 14.2 2 9.3l7.1-.8L12 2z"/></svg>
+          </div>
+          <p>Bon rapport qualité-prix, portions généreuses et service accueillant à chaque visite.</p>
+          <span class="testimonial-source">Avis client Google</span>
+        </div>
+        <div class="testimonial-card reveal">
+          <div class="stars" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.5L22 9.3l-5 4.9 1.2 7.1L12 17.9l-6.2 3.4L7 14.2 2 9.3l7.1-.8L12 2z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.5L22 9.3l-5 4.9 1.2 7.1L12 17.9l-6.2 3.4L7 14.2 2 9.3l7.1-.8L12 2z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.5L22 9.3l-5 4.9 1.2 7.1L12 17.9l-6.2 3.4L7 14.2 2 9.3l7.1-.8L12 2z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.5L22 9.3l-5 4.9 1.2 7.1L12 17.9l-6.2 3.4L7 14.2 2 9.3l7.1-.8L12 2z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.5L22 9.3l-5 4.9 1.2 7.1L12 17.9l-6.2 3.4L7 14.2 2 9.3l7.1-.8L12 2z"/></svg>
+          </div>
+          <p>Locaux impeccables, grandes portions à prix justes — on y mange toujours très bien.</p>
+          <span class="testimonial-source">Avis client Google</span>
+        </div>
+        <div class="testimonial-card reveal">
+          <div class="stars" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.5L22 9.3l-5 4.9 1.2 7.1L12 17.9l-6.2 3.4L7 14.2 2 9.3l7.1-.8L12 2z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.5L22 9.3l-5 4.9 1.2 7.1L12 17.9l-6.2 3.4L7 14.2 2 9.3l7.1-.8L12 2z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.5L22 9.3l-5 4.9 1.2 7.1L12 17.9l-6.2 3.4L7 14.2 2 9.3l7.1-.8L12 2z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.5L22 9.3l-5 4.9 1.2 7.1L12 17.9l-6.2 3.4L7 14.2 2 9.3l7.1-.8L12 2z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.5L22 9.3l-5 4.9 1.2 7.1L12 17.9l-6.2 3.4L7 14.2 2 9.3l7.1-.8L12 2z"/></svg>
+          </div>
+          <p>Client fidèle depuis 2010&nbsp;: accueil chaleureux, personnel serviable et prix accessibles à tous.</p>
+          <span class="testimonial-source">Avis client Google</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA BANNER -->
+  <section class="cta-banner">
+    <h2 class="reveal">Une envie ce soir&nbsp;?</h2>
+    <p class="reveal">Appelez pour commander ou laissez-vous guider jusqu'à notre porte bleue, à deux pas de la gare.</p>
+    <div class="hero-actions reveal">
+      <a href="nous-trouver.html" class="btn btn-primary">Nous trouver</a>
+      <a href="tel:+33556929118" class="btn btn-outline">05 56 92 91 18</a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <span class="brand brand-small">Ezzahra</span>
+    <span>236 Cours de la Marne, 33800 Bordeaux · 05 56 92 91 18</span>
+    <a href="https://maps.app.goo.gl/a5rhHqk5ih8BwgX77?g_st=ac" target="_blank" rel="noopener" style="color:var(--gold);">Voir sur Google Maps</a>
+    <span>&copy; <span id="year"></span> Ezzahra</span>
+  </div>
+</footer>
+
+<a href="tel:+33556929118" class="fab-call" id="fabCall" aria-label="Appeler Ezzahra">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+</a>
+
+<script src="script.js" defer></script>
+</body>
+</html>

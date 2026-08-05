@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Statistiques inscriptions — Ezzahra (privé)</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" href="favicon-32.png" sizes="32x32">
+<link rel="icon" href="favicon-512.png" sizes="512x512">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,500&family=IBM+Plex+Mono:wght@400;500;600&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="brand">Ezzahra</a>
+    <nav class="nav-links" id="navLinks">
+      <a href="index.html">Accueil</a>
+      <a href="menu.html">Menu</a>
+      <a href="galerie.html">Galerie</a>
+      <a href="puzzle.html">Jeu</a>
+      <a href="nous-trouver.html">Nous trouver</a>
+    </nav>
+    <a href="tel:+33556929118" class="btn btn-ghost nav-call">05 56 92 91 18</a>
+    <button class="burger" id="burger" aria-label="Ouvrir le menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main>
+
+  <section class="page-hero" style="min-height:32vh;">
+    <div class="hero-bg" data-parallax style="background-image:url('hero-food.jpg');"></div>
+    <div class="page-hero-content">
+      <p class="eyebrow eyebrow-light">ESPACE PRIVÉ</p>
+      <h1 class="hero-title" style="font-size:clamp(1.7rem,4vw,2.3rem);">D'où viennent nos clients</h1>
+      <p class="hero-sub">Répartition des inscriptions au programme fidélité, par pays.</p>
+    </div>
+  </section>
+
+  <section class="stats-section">
+    <div class="stats-inner">
+
+      <div class="stats-summary reveal" id="statsSummary" style="display:none;">
+        <div class="stats-summary-card">
+          <span class="num" id="statTotal">0</span>
+          <span class="lbl">Inscriptions</span>
+        </div>
+        <div class="stats-summary-card">
+          <span class="num" id="statCountries">0</span>
+          <span class="lbl">Pays représentés</span>
+        </div>
+        <div class="stats-summary-card">
+          <span class="num" id="statTop">—</span>
+          <span class="lbl">Pays n°1</span>
+        </div>
+      </div>
+
+      <div class="stat-list" id="statList"></div>
+      <div class="stats-empty" id="statsEmpty" style="display:none;">Aucune inscription pour le moment — les statistiques apparaîtront ici dès les premières réponses.</div>
+      <div class="stats-error" id="statsError" style="display:none;">
+        Cette page n'est pas encore connectée à vos données.<br>
+        Ouvrez <code>statistiques.html</code> et renseignez <code>SHEET_CSV_URL</code> en haut du script avec le lien "Publier sur le web (CSV)" de votre Google Sheet de réponses.
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <span class="brand brand-small">Ezzahra</span>
+    <span>236 Cours de la Marne, 33800 Bordeaux · 05 56 92 91 18</span>
+    <span>&copy; <span id="year"></span> Ezzahra</span>
+  </div>
+</footer>
+
+<script src="script.js" defer></script>
+<script>
+/* ============================================================
+   CONFIGURATION — à renseigner par le propriétaire du site
+   ============================================================
+   1. Créez un Google Form avec un champ "Pays de résidence"
+      (utilisez la même liste de pays que dans inscription.html).
+   2. Reliez-le à une feuille Google Sheets (onglet "Réponses").
+   3. Dans Sheets : Fichier > Partager > Publier sur le Web
+      → choisissez l'onglet réponses → format CSV → Publier.
+   4. Collez le lien obtenu ci-dessous.
+   ============================================================ */
+const SHEET_CSV_URL = "PASTE_YOUR_PUBLISHED_SHEET_CSV_LINK_HERE";
+const COUNTRY_COLUMN_NAME = "Pays de résidence"; // doit correspondre à l'intitulé exact de la colonne
+
+const COUNTRY_FLAGS = {
+  "France": "🇫🇷",
+  "Tunisie": "🇹🇳",
+  "Algérie": "🇩🇿",
+  "Maroc": "🇲🇦",
+  "Libye": "🇱🇾",
+  "Égypte": "🇪🇬",
+  "Belgique": "🇧🇪",
+  "Suisse": "🇨🇭",
+  "Luxembourg": "🇱🇺",
+  "Allemagne": "🇩🇪",
+  "Espagne": "🇪🇸",
+  "Italie": "🇮🇹",
+  "Portugal": "🇵🇹",
+  "Royaume-Uni": "🇬🇧",
+  "Irlande": "🇮🇪",
+  "Pays-Bas": "🇳🇱",
+  "Sénégal": "🇸🇳",
+  "Côte d'Ivoire": "🇨🇮",
+  "Mali": "🇲🇱",
+  "Cameroun": "🇨🇲",
+  "Turquie": "🇹🇷",
+  "Liban": "🇱🇧",
+  "Syrie": "🇸🇾",
+  "Arabie saoudite": "🇸🇦",
+  "Émirats arabes unis": "🇦🇪",
+  "Qatar": "🇶🇦",
+  "États-Unis": "🇺🇸",
+  "Canada": "🇨🇦",
+  "Brésil": "🇧🇷",
+  "Chine": "🇨🇳",
+  "Japon": "🇯🇵",
+  "Inde": "🇮🇳",
+  "Russie": "🇷🇺",
+  "Pologne": "🇵🇱",
+  "Roumanie": "🇷🇴",
+  "Grèce": "🇬🇷",
+  "Suède": "🇸🇪",
+  "Norvège": "🇳🇴",
+  "Danemark": "🇩🇰",
+  "Finlande": "🇫🇮",
+  "Autriche": "🇦🇹",
+  "Mauritanie": "🇲🇷",
+  "Niger": "🇳🇪",
+  "Tchad": "🇹🇩",
+  "Guinée": "🇬🇳",
+  "Burkina Faso": "🇧🇫",
+  "Togo": "🇹🇬",
+  "Bénin": "🇧🇯",
+  "RD Congo": "🇨🇩",
+  "Congo": "🇨🇬",
+  "Gabon": "🇬🇦",
+  "Madagascar": "🇲🇬",
+  "Comores": "🇰🇲",
+  "Djibouti": "🇩🇯",
+  "Irak": "🇮🇶",
+  "Jordanie": "🇯🇴",
+  "Palestine": "🇵🇸",
+  "Koweït": "🇰🇼",
+  "Oman": "🇴🇲",
+  "Bahreïn": "🇧🇭"
+};
+
+function parseCSV(text) {
+  const rows = [];
+  let row = [], field = '', inQuotes = false;
+  for (let i = 0; i < text.length; i++) {
+    const c = text[i];
+    if (inQuotes) {
+      if (c === '"' && text[i + 1] === '"') { field += '"'; i++; }
+      else if (c === '"') { inQuotes = false; }
+      else { field += c; }
+    } else {
+      if (c === '"') inQuotes = true;
+      else if (c === ',') { row.push(field); field = ''; }
+      else if (c === '\n' || c === '\r') {
+        if (field.length || row.length) { row.push(field); rows.push(row); }
+        field = ''; row = [];
+        if (c === '\r' && text[i + 1] === '\n') i++;
+      } else field += c;
+    }
+  }
+  if (field.length || row.length) { row.push(field); rows.push(row); }
+  return rows;
+}
+
+async function loadStats() {
+  const listEl = document.getElementById('statList');
+  const emptyEl = document.getElementById('statsEmpty');
+  const errorEl = document.getElementById('statsError');
+  const summaryEl = document.getElementById('statsSummary');
+
+  if (!SHEET_CSV_URL || SHEET_CSV_URL.indexOf('PASTE_YOUR') === 0) {
+    errorEl.style.display = 'block';
+    return;
+  }
+
+  try {
+    const res = await fetch(SHEET_CSV_URL);
+    if (!res.ok) throw new Error('fetch failed');
+    const text = await res.text();
+    const rows = parseCSV(text).filter(r => r.length && r.some(c => c.trim() !== ''));
+    if (rows.length < 2) { emptyEl.style.display = 'block'; return; }
+
+    const header = rows[0].map(h => h.trim());
+    let colIndex = header.indexOf(COUNTRY_COLUMN_NAME);
+    if (colIndex === -1) colIndex = header.length - 1; // fallback: last column
+
+    const counts = {};
+    let total = 0;
+    for (let i = 1; i < rows.length; i++) {
+      const val = (rows[i][colIndex] || '').trim();
+      if (!val) continue;
+      counts[val] = (counts[val] || 0) + 1;
+      total++;
+    }
+
+    if (total === 0) { emptyEl.style.display = 'block'; return; }
+
+    const sorted = Object.entries(counts).sort((a, b) => b[1] - a[1]);
+
+    document.getElementById('statTotal').textContent = total;
+    document.getElementById('statCountries').textContent = sorted.length;
+    document.getElementById('statTop').textContent = sorted[0][0];
+    summaryEl.style.display = 'flex';
+
+    sorted.forEach(([country, count]) => {
+      const pct = ((count / total) * 100).toFixed(1);
+      const flag = COUNTRY_FLAGS[country] || '🏳️';
+      const row = document.createElement('div');
+      row.className = 'stat-row reveal';
+      row.innerHTML = `
+        <span class="stat-flag">${flag}</span>
+        <div class="stat-main">
+          <div class="stat-top">
+            <span class="stat-country">${country}</span>
+            <span class="stat-pct">${pct}%</span>
+          </div>
+          <div class="stat-track"><div class="stat-fill" data-pct="${pct}"></div></div>
+        </div>
+        <span class="stat-count">${count}</span>
+      `;
+      listEl.appendChild(row);
+    });
+
+    // Reveal + animate bars on scroll
+    const rowsEls = listEl.querySelectorAll('.stat-row');
+    if ('IntersectionObserver' in window) {
+      const obs = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            const fill = entry.target.querySelector('.stat-fill');
+            requestAnimationFrame(() => { fill.style.width = fill.dataset.pct + '%'; });
+            obs.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.2 });
+      rowsEls.forEach(r => obs.observe(r));
+    } else {
+      rowsEls.forEach(r => {
+        r.classList.add('is-visible');
+        r.querySelector('.stat-fill').style.width = r.querySelector('.stat-fill').dataset.pct + '%';
+      });
+    }
+  } catch (err) {
+    errorEl.style.display = 'block';
+  }
+}
+
+loadStats();
+</script>
+</body>
+</html>

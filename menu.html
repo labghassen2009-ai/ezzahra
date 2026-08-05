@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Menu — Ezzahra Bordeaux</title>
+<meta name="description" content="La carte complète d'Ezzahra à Bordeaux : sandwichs, tacos, assiettes, couscous, plats, pâtisseries et boissons.">
+<link rel="icon" href="favicon-32.png" sizes="32x32">
+<link rel="icon" href="favicon-512.png" sizes="512x512">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="canonical" href="https://www.ezzahra-bordeaux.fr/menu.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Menu — Ezzahra Bordeaux">
+<meta property="og:description" content="La carte complète d'Ezzahra à Bordeaux : sandwichs, tacos, assiettes, couscous, plats, pâtisseries et boissons.">
+<meta property="og:image" content="hero-food.jpg">
+<meta property="og:url" content="https://www.ezzahra-bordeaux.fr/menu.html">
+<meta property="og:locale" content="fr_FR">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Menu — Ezzahra Bordeaux">
+<meta name="twitter:description" content="La carte complète d'Ezzahra à Bordeaux : sandwichs, tacos, assiettes, couscous, plats, pâtisseries et boissons.">
+<meta name="twitter:image" content="hero-food.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,500&family=IBM+Plex+Mono:wght@400;500;600&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="brand">Ezzahra</a>
+    <nav class="nav-links" id="navLinks">
+      <a href="index.html">Accueil</a>
+      <a href="menu.html" class="is-active">Menu</a>
+      <a href="galerie.html">Galerie</a>
+      <a href="puzzle.html">Jeu</a>
+      <a href="nous-trouver.html">Nous trouver</a>
+    </nav>
+    <a href="tel:+33556929118" class="btn btn-ghost nav-call">05 56 92 91 18</a>
+    <button class="burger" id="burger" aria-label="Ouvrir le menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main>
+
+  <section class="page-hero">
+    <div class="hero-bg" data-parallax style="background-image:url('https://images.unsplash.com/photo-1541518763669-27fef04b14ea?auto=format&fit=crop&w=1800&q=70');"></div>
+    <div class="page-hero-content">
+      <p class="eyebrow eyebrow-light">LA CARTE</p>
+      <h1 class="hero-title">Tout ce qu'on prépare pour vous</h1>
+      <p class="hero-sub">Halal, généreux, servi sur place, à emporter ou en livraison.</p>
+    </div>
+  </section>
+
+  <!-- MENU (departure board) -->
+  <section class="menu" id="menu">
+    <div class="menu-inner">
+
+      <div class="acc-list" id="board">
+
+        <div class="acc-item">
+          <button class="acc-head" aria-expanded="false">
+            <img class="acc-thumb" src="https://images.unsplash.com/photo-1699728088614-7d1d4277414b?auto=format&fit=crop&w=200&q=70" alt="Sandwichs Ezzahra" loading="lazy">
+            <div class="acc-head-text">
+              <div class="acc-title-row">
+                <span class="acc-title">Sandwichs</span>
+                <span class="acc-badge">dès 8,00&nbsp;€</span>
+              </div>
+              <p class="acc-sub">7 recettes · servis avec frites &amp; boisson 33cl</p>
+            </div>
+            <svg class="acc-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="acc-panel">
+            <div class="acc-panel-inner">
+              <div class="board-row"><span class="dish">Kebab</span><span class="leader"></span><span class="price">8,00&nbsp;€</span></div>
+              <div class="board-row"><span class="dish">Kefta</span><span class="leader"></span><span class="price">8,00&nbsp;€</span></div>
+              <div class="board-row"><span class="dish">Merguez</span><span class="leader"></span><span class="price">8,00&nbsp;€</span></div>
+              <div class="board-row"><span class="dish">Végétarien</span><span class="leader"></span><span class="price">8,00&nbsp;€</span></div>
+              <div class="board-row"><span class="dish">Américain <small>(2 steaks)</small></span><span class="leader"></span><span class="price">9,00&nbsp;€</span></div>
+              <div class="board-row"><span class="dish">Poulet curry</span><span class="leader"></span><span class="price">9,00&nbsp;€</span></div>
+              <div class="board-row"><span class="dish">Magistral <small>(3 steaks, fromage, œuf)</small></span><span class="leader"></span><span class="price">10,00&nbsp;€</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="acc-item">
+          <button class="acc-head" aria-expanded="false">
+            <img class="acc-thumb" src="https://images.unsplash.com/photo-1631021967255-898a52176fea?auto=format&fit=crop&w=200&q=70" alt="Tacos Ezzahra" loading="lazy">
+            <div class="acc-head-text">
+              <div class="acc-title-row">
+                <span class="acc-title">Tacos</span>
+                <span class="acc-badge">dès 10,00&nbsp;€</span>
+              </div>
+              <p class="acc-sub">5 formules · garnis frites &amp; sauce fromagère</p>
+            </div>
+            <svg class="acc-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="acc-panel">
+            <div class="acc-panel-inner">
+              <div class="board-row"><span class="dish">Classic M</span><span class="leader"></span><span class="price">10,00&nbsp;€</span></div>
+              <div class="board-row"><span class="dish">Classic L</span><span class="leader"></span><span class="price">11,00&nbsp;€</span></div>
+              <div class="board-row"><span class="dish">Classic XL</span><span class="leader"></span><span class="price">12,00&nbsp;€</span></div>
+              <div class="board-row"><span class="dish">Gratiné <small>(chèvre miel ou cheddar)</small></span><span class="leader"></span><span class="price">+2,50&nbsp;€</span></div>
+              <div class="board-row"><span class="dish">Taco Bowl</span><span class="leader"></span><span class="price">+1,00&nbsp;€</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="acc-item">
+          <button class="acc-head" aria-expanded="false">
+            <img class="acc-thumb" src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=200&q=70" alt="Assiettes Ezzahra" loading="lazy">
+            <div class="acc-head-text">
+              <div class="acc-title-row">
+                <span class="acc-title">Assiettes</span>
+                <span class="acc-badge">dès 11,00&nbsp;€</span>
+              </div>
+              <p class="acc-sub">Kebab, poulet, merguez, steak, kefta ou brochette</p>
+            </div>
+            <svg class="acc-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="acc-panel">
+            <div class="acc-panel-inner">
+              <div class="board-row"><span class="dish">1 viande au choix</span><span class="leader"></span><span class="price">11,00&nbsp;€</span></div>
+              <div class="board-row"><span class="dish">2 viandes au choix</span><span class="leader"></span><span class="price">13,00&nbsp;€</span></div>
+              <div class="board-row"><span class="dish">3 viandes au choix</span><span class="leader"></span><span class="price">15,00&nbsp;€</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="acc-item">
+          <button class="acc-head" aria-expanded="false">
+            <img class="acc-thumb" src="https://images.unsplash.com/photo-1778850790390-c1ba244fbc85?auto=format&fit=crop&w=200&q=70" alt="Couscous Ezzahra" loading="lazy">
+            <div class="acc-head-text">
+              <div class="acc-title-row">
+                <span class="acc-title">Couscous</span>
+                <span class="acc-badge">dès 12,00&nbsp;€</span>
+              </div>
+              <p class="acc-sub">5 recettes · semoule roulée maison</p>
+            </div>
+            <svg class="acc-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="acc-panel">
+            <div class="acc-panel-inner">
+              <div class="board-row"><span class="dish">Poulet</span><span class="leader"></span><span class="price">12,00&nbsp;€</span></div>
+              <div class="board-row"><span class="dish">Merguez</span><span class="leader"></span><span class="price">14,00&nbsp;€</span></div>
+              <div class="board-row"><span class="dish">Agneau</span><span class="leader"></span><span class="price">14,00&nbsp;€</span></div>
+              <div class="board-row"><span class="dish">Poisson</span><span class="leader"></span><span class="price">18,00&nbsp;€</span></div>
+              <div class="board-row"><span class="dish">Royal <small>toutes les viandes</small></span><span class="leader"></span><span class="price">18,50&nbsp;€</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="acc-item">
+          <button class="acc-head" aria-expanded="false">
+            <img class="acc-thumb" src="https://images.unsplash.com/photo-1607116685391-29c9e9726561?auto=format&fit=crop&w=200&q=70" alt="Plats et Croustys Ezzahra" loading="lazy">
+            <div class="acc-head-text">
+              <div class="acc-title-row">
+                <span class="acc-title">Plats &amp; Croustys</span>
+                <span class="acc-badge">dès 10,00&nbsp;€</span>
+              </div>
+              <p class="acc-sub">Pâtes, lasagne, côtelettes et bols garnis</p>
+            </div>
+            <svg class="acc-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="acc-panel">
+            <div class="acc-panel-inner">
+              <div class="board-row"><span class="dish">Pâtes au poulet</span><span class="leader"></span><span class="price">10,00&nbsp;€</span></div>
+              <div class="board-row"><span class="dish">Pâtes bolognaise</span><span class="leader"></span><span class="price">10,00&nbsp;€</span></div>
+              <div class="board-row"><span class="dish">Lasagne</span><span class="leader"></span><span class="price">10,00&nbsp;€</span></div>
+              <div class="board-row"><span class="dish">Côtelettes</span><span class="leader"></span><span class="price">15,00&nbsp;€</span></div>
+              <div class="board-row"><span class="dish">Crousty M</span><span class="leader"></span><span class="price">10,00&nbsp;€</span></div>
+              <div class="board-row"><span class="dish">Crousty L</span><span class="leader"></span><span class="price">12,00&nbsp;€</span></div>
+              <div class="board-row"><span class="dish">Crousty XL</span><span class="leader"></span><span class="price">15,00&nbsp;€</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="acc-item">
+          <button class="acc-head" aria-expanded="false">
+            <img class="acc-thumb" src="https://images.unsplash.com/photo-1541518763669-27fef04b14ea?auto=format&fit=crop&w=200&q=70" alt="Paninis et en-cas Ezzahra" loading="lazy">
+            <div class="acc-head-text">
+              <div class="acc-title-row">
+                <span class="acc-title">Paninis &amp; en-cas</span>
+                <span class="acc-badge">dès 2,50&nbsp;€</span>
+              </div>
+              <p class="acc-sub">Paninis, bricks, tajine et frites</p>
+            </div>
+            <svg class="acc-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="acc-panel">
+            <div class="acc-panel-inner">
+              <div class="board-row"><span class="dish">Panini <small>thon, saumon, poulet ou 4 fromages</small></span><span class="leader"></span><span class="price">8,00&nbsp;€</span></div>
+              <div class="board-row"><span class="dish">Brick à l'œuf</span><span class="leader"></span><span class="price">4,50&nbsp;€</span></div>
+              <div class="board-row"><span class="dish">Tajine tunisien</span><span class="leader"></span><span class="price">4,50&nbsp;€</span></div>
+              <div class="board-row"><span class="dish">Frites petite</span><span class="leader"></span><span class="price">2,50&nbsp;€</span></div>
+              <div class="board-row"><span class="dish">Frites grande</span><span class="leader"></span><span class="price">3,50&nbsp;€</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="acc-item">
+          <button class="acc-head" aria-expanded="false">
+            <span class="acc-thumb-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M4 12h16M4 12a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2M4 12v6a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-6M9 10V7a1.5 1.5 0 0 1 3 0v3M12 7a1.5 1.5 0 0 1 3 0v3"/></svg>
+            </span>
+            <div class="acc-head-text">
+              <div class="acc-title-row">
+                <span class="acc-title">Pâtisseries &amp; desserts</span>
+                <span class="acc-badge">dès 1,80&nbsp;€</span>
+              </div>
+              <p class="acc-sub">Gâteaux orientaux, tiramisu, fondant</p>
+            </div>
+            <svg class="acc-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="acc-panel">
+            <div class="acc-panel-inner">
+              <div class="board-row"><span class="dish">Gâteaux orientaux</span><span class="leader"></span><span class="price">1,80&nbsp;€</span></div>
+              <div class="board-row"><span class="dish">Fondant chocolat</span><span class="leader"></span><span class="price">2,50&nbsp;€</span></div>
+              <div class="board-row"><span class="dish">Tarte au Daim</span><span class="leader"></span><span class="price">2,50&nbsp;€</span></div>
+              <div class="board-row"><span class="dish">Tiramisu</span><span class="leader"></span><span class="price">3,50&nbsp;€</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="acc-item">
+          <button class="acc-head" aria-expanded="false">
+            <span class="acc-thumb-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M6 2h12l-1.5 15a2 2 0 0 1-2 1.8h-5a2 2 0 0 1-2-1.8L6 2Z"/><path d="M5 2h14M9 8h6"/></svg>
+            </span>
+            <div class="acc-head-text">
+              <div class="acc-title-row">
+                <span class="acc-title">Boissons</span>
+                <span class="acc-badge">dès 2,00&nbsp;€</span>
+              </div>
+              <p class="acc-sub">Sodas et eau, plusieurs formats</p>
+            </div>
+            <svg class="acc-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="acc-panel">
+            <div class="acc-panel-inner">
+              <div class="board-row"><span class="dish">Soda 33&nbsp;cl</span><span class="leader"></span><span class="price">2,00&nbsp;€</span></div>
+              <div class="board-row"><span class="dish">Soda 50&nbsp;cl</span><span class="leader"></span><span class="price">2,50&nbsp;€</span></div>
+              <div class="board-row"><span class="dish">Soda 1,5&nbsp;L</span><span class="leader"></span><span class="price">3,50&nbsp;€</span></div>
+              <div class="board-row"><span class="dish">Eau 50&nbsp;cl</span><span class="leader"></span><span class="price">2,00&nbsp;€</span></div>
+              <div class="board-row"><span class="dish">Eau 1,5&nbsp;L</span><span class="leader"></span><span class="price">2,50&nbsp;€</span></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <p class="board-note">Cliquez sur une catégorie pour l'ouvrir. Suppléments fromage possibles sur tacos &amp; sandwichs (cheddar, chèvre, boursin, kiri…). Prix TTC — sur place, à emporter ou en livraison.</p>
+    </div>
+  </section>
+
+  <!-- CTA BANNER -->
+  <section class="cta-banner">
+    <h2 class="reveal">Prêt à commander&nbsp;?</h2>
+    <p class="reveal">Un appel suffit, ou passez directement à l'adresse — on vous attend.</p>
+    <div class="hero-actions reveal">
+      <a href="tel:+33556929118" class="btn btn-primary">Appeler Ezzahra</a>
+      <a href="nous-trouver.html" class="btn btn-outline">Itinéraire</a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <span class="brand brand-small">Ezzahra</span>
+    <span>236 Cours de la Marne, 33800 Bordeaux · 05 56 92 91 18</span>
+    <a href="https://maps.app.goo.gl/a5rhHqk5ih8BwgX77?g_st=ac" target="_blank" rel="noopener" style="color:var(--gold);">Voir sur Google Maps</a>
+    <span>&copy; <span id="year"></span> Ezzahra</span>
+  </div>
+</footer>
+
+<a href="tel:+33556929118" class="fab-call" id="fabCall" aria-label="Appeler Ezzahra">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+</a>
+
+<script src="script.js" defer></script>
+</body>
+</html>

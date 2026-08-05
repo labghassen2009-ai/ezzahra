@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Puzzle Ezzahra — Reconstituez notre façade !</title>
+<meta name="description" content="Jouez au puzzle Ezzahra : 5 niveaux de difficulté, classement des meilleurs joueurs, à Bordeaux.">
+<link rel="icon" href="favicon-32.png" sizes="32x32">
+<link rel="icon" href="favicon-512.png" sizes="512x512">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="canonical" href="https://www.ezzahra-bordeaux.fr/puzzle.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Puzzle Ezzahra — Reconstituez notre façade !">
+<meta property="og:description" content="Jouez au puzzle Ezzahra : 5 niveaux de difficulté, classement des meilleurs joueurs, à Bordeaux.">
+<meta property="og:image" content="puzzle-ezzahra.jpg">
+<meta property="og:url" content="https://www.ezzahra-bordeaux.fr/puzzle.html">
+<meta property="og:locale" content="fr_FR">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Puzzle Ezzahra — Reconstituez notre façade !">
+<meta name="twitter:description" content="Jouez au puzzle Ezzahra : 5 niveaux de difficulté, classement des meilleurs joueurs, à Bordeaux.">
+<meta name="twitter:image" content="puzzle-ezzahra.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,500&family=IBM+Plex+Mono:wght@400;500;600&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Player identity gate (name + country, asked once) -->
+<div class="entry-gate" id="playerGate" style="background-image:url('puzzle-ezzahra.jpg');">
+  <div class="entry-gate-card">
+    <p class="entry-gate-brand">Ezzahra</p>
+    <h2 class="entry-gate-title">Prêt à jouer ?</h2>
+    <p class="entry-gate-sub">Entrez votre nom et votre pays pour apparaître au classement.</p>
+
+    <form id="playerForm" novalidate>
+      <div class="form-row">
+        <label class="form-label" for="p-name">Votre nom <span class="req">*</span></label>
+        <input class="form-input" id="p-name" type="text" placeholder="Ex. Mohamed" maxlength="24" required>
+      </div>
+      <div class="form-row">
+        <label class="form-label" for="pCountryBtn">Votre pays <span class="req">*</span></label>
+        <div class="cselect" id="pCountrySelect">
+          <button type="button" class="cselect-btn" id="pCountryBtn" aria-haspopup="listbox" aria-expanded="false">
+            <span class="cselect-btn-label"><span class="cselect-placeholder">Sélectionnez votre pays</span></span>
+            <svg class="cselect-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <ul class="cselect-list" role="listbox" tabindex="-1">
+              <li role="option" data-value="France" data-iso="fr" tabindex="-1"><img src="https://flagcdn.com/24x18/fr.png" srcset="https://flagcdn.com/48x36/fr.png 2x" width="24" height="18" alt=""><span>France</span></li>
+              <li role="option" data-value="Tunisie" data-iso="tn" tabindex="-1"><img src="https://flagcdn.com/24x18/tn.png" srcset="https://flagcdn.com/48x36/tn.png 2x" width="24" height="18" alt=""><span>Tunisie</span></li>
+              <li role="option" data-value="Algérie" data-iso="dz" tabindex="-1"><img src="https://flagcdn.com/24x18/dz.png" srcset="https://flagcdn.com/48x36/dz.png 2x" width="24" height="18" alt=""><span>Algérie</span></li>
+              <li role="option" data-value="Maroc" data-iso="ma" tabindex="-1"><img src="https://flagcdn.com/24x18/ma.png" srcset="https://flagcdn.com/48x36/ma.png 2x" width="24" height="18" alt=""><span>Maroc</span></li>
+              <li role="option" data-value="Libye" data-iso="ly" tabindex="-1"><img src="https://flagcdn.com/24x18/ly.png" srcset="https://flagcdn.com/48x36/ly.png 2x" width="24" height="18" alt=""><span>Libye</span></li>
+              <li role="option" data-value="Égypte" data-iso="eg" tabindex="-1"><img src="https://flagcdn.com/24x18/eg.png" srcset="https://flagcdn.com/48x36/eg.png 2x" width="24" height="18" alt=""><span>Égypte</span></li>
+              <li role="option" data-value="Mauritanie" data-iso="mr" tabindex="-1"><img src="https://flagcdn.com/24x18/mr.png" srcset="https://flagcdn.com/48x36/mr.png 2x" width="24" height="18" alt=""><span>Mauritanie</span></li>
+              <li role="option" data-value="Soudan" data-iso="sd" tabindex="-1"><img src="https://flagcdn.com/24x18/sd.png" srcset="https://flagcdn.com/48x36/sd.png 2x" width="24" height="18" alt=""><span>Soudan</span></li>
+              <li role="option" data-value="Belgique" data-iso="be" tabindex="-1"><img src="https://flagcdn.com/24x18/be.png" srcset="https://flagcdn.com/48x36/be.png 2x" width="24" height="18" alt=""><span>Belgique</span></li>
+              <li role="option" data-value="Suisse" data-iso="ch" tabindex="-1"><img src="https://flagcdn.com/24x18/ch.png" srcset="https://flagcdn.com/48x36/ch.png 2x" width="24" height="18" alt=""><span>Suisse</span></li>
+              <li role="option" data-value="Luxembourg" data-iso="lu" tabindex="-1"><img src="https://flagcdn.com/24x18/lu.png" srcset="https://flagcdn.com/48x36/lu.png 2x" width="24" height="18" alt=""><span>Luxembourg</span></li>
+              <li role="option" data-value="Allemagne" data-iso="de" tabindex="-1"><img src="https://flagcdn.com/24x18/de.png" srcset="https://flagcdn.com/48x36/de.png 2x" width="24" height="18" alt=""><span>Allemagne</span></li>
+              <li role="option" data-value="Espagne" data-iso="es" tabindex="-1"><img src="https://flagcdn.com/24x18/es.png" srcset="https://flagcdn.com/48x36/es.png 2x" width="24" height="18" alt=""><span>Espagne</span></li>
+              <li role="option" data-value="Italie" data-iso="it" tabindex="-1"><img src="https://flagcdn.com/24x18/it.png" srcset="https://flagcdn.com/48x36/it.png 2x" width="24" height="18" alt=""><span>Italie</span></li>
+              <li role="option" data-value="Portugal" data-iso="pt" tabindex="-1"><img src="https://flagcdn.com/24x18/pt.png" srcset="https://flagcdn.com/48x36/pt.png 2x" width="24" height="18" alt=""><span>Portugal</span></li>
+              <li role="option" data-value="Royaume-Uni" data-iso="gb" tabindex="-1"><img src="https://flagcdn.com/24x18/gb.png" srcset="https://flagcdn.com/48x36/gb.png 2x" width="24" height="18" alt=""><span>Royaume-Uni</span></li>
+              <li role="option" data-value="Irlande" data-iso="ie" tabindex="-1"><img src="https://flagcdn.com/24x18/ie.png" srcset="https://flagcdn.com/48x36/ie.png 2x" width="24" height="18" alt=""><span>Irlande</span></li>
+              <li role="option" data-value="Pays-Bas" data-iso="nl" tabindex="-1"><img src="https://flagcdn.com/24x18/nl.png" srcset="https://flagcdn.com/48x36/nl.png 2x" width="24" height="18" alt=""><span>Pays-Bas</span></li>
+              <li role="option" data-value="Autriche" data-iso="at" tabindex="-1"><img src="https://flagcdn.com/24x18/at.png" srcset="https://flagcdn.com/48x36/at.png 2x" width="24" height="18" alt=""><span>Autriche</span></li>
+              <li role="option" data-value="Pologne" data-iso="pl" tabindex="-1"><img src="https://flagcdn.com/24x18/pl.png" srcset="https://flagcdn.com/48x36/pl.png 2x" width="24" height="18" alt=""><span>Pologne</span></li>
+              <li role="option" data-value="Roumanie" data-iso="ro" tabindex="-1"><img src="https://flagcdn.com/24x18/ro.png" srcset="https://flagcdn.com/48x36/ro.png 2x" width="24" height="18" alt=""><span>Roumanie</span></li>
+              <li role="option" data-value="Grèce" data-iso="gr" tabindex="-1"><img src="https://flagcdn.com/24x18/gr.png" srcset="https://flagcdn.com/48x36/gr.png 2x" width="24" height="18" alt=""><span>Grèce</span></li>
+              <li role="option" data-value="Suède" data-iso="se" tabindex="-1"><img src="https://flagcdn.com/24x18/se.png" srcset="https://flagcdn.com/48x36/se.png 2x" width="24" height="18" alt=""><span>Suède</span></li>
+              <li role="option" data-value="Norvège" data-iso="no" tabindex="-1"><img src="https://flagcdn.com/24x18/no.png" srcset="https://flagcdn.com/48x36/no.png 2x" width="24" height="18" alt=""><span>Norvège</span></li>
+              <li role="option" data-value="Danemark" data-iso="dk" tabindex="-1"><img src="https://flagcdn.com/24x18/dk.png" srcset="https://flagcdn.com/48x36/dk.png 2x" width="24" height="18" alt=""><span>Danemark</span></li>
+              <li role="option" data-value="Finlande" data-iso="fi" tabindex="-1"><img src="https://flagcdn.com/24x18/fi.png" srcset="https://flagcdn.com/48x36/fi.png 2x" width="24" height="18" alt=""><span>Finlande</span></li>
+              <li role="option" data-value="Islande" data-iso="is" tabindex="-1"><img src="https://flagcdn.com/24x18/is.png" srcset="https://flagcdn.com/48x36/is.png 2x" width="24" height="18" alt=""><span>Islande</span></li>
+              <li role="option" data-value="Tchéquie" data-iso="cz" tabindex="-1"><img src="https://flagcdn.com/24x18/cz.png" srcset="https://flagcdn.com/48x36/cz.png 2x" width="24" height="18" alt=""><span>Tchéquie</span></li>
+              <li role="option" data-value="Slovaquie" data-iso="sk" tabindex="-1"><img src="https://flagcdn.com/24x18/sk.png" srcset="https://flagcdn.com/48x36/sk.png 2x" width="24" height="18" alt=""><span>Slovaquie</span></li>
+              <li role="option" data-value="Hongrie" data-iso="hu" tabindex="-1"><img src="https://flagcdn.com/24x18/hu.png" srcset="https://flagcdn.com/48x36/hu.png 2x" width="24" height="18" alt=""><span>Hongrie</span></li>
+              <li role="option" data-value="Bulgarie" data-iso="bg" tabindex="-1"><img src="https://flagcdn.com/24x18/bg.png" srcset="https://flagcdn.com/48x36/bg.png 2x" width="24" height="18" alt=""><span>Bulgarie</span></li>
+              <li role="option" data-value="Croatie" data-iso="hr" tabindex="-1"><img src="https://flagcdn.com/24x18/hr.png" srcset="https://flagcdn.com/48x36/hr.png 2x" width="24" height="18" alt=""><span>Croatie</span></li>
+              <li role="option" data-value="Serbie" data-iso="rs" tabindex="-1"><img src="https://flagcdn.com/24x18/rs.png" srcset="https://flagcdn.com/48x36/rs.png 2x" width="24" height="18" alt=""><span>Serbie</span></li>
+              <li role="option" data-value="Ukraine" data-iso="ua" tabindex="-1"><img src="https://flagcdn.com/24x18/ua.png" srcset="https://flagcdn.com/48x36/ua.png 2x" width="24" height="18" alt=""><span>Ukraine</span></li>
+              <li role="option" data-value="Russie" data-iso="ru" tabindex="-1"><img src="https://flagcdn.com/24x18/ru.png" srcset="https://flagcdn.com/48x36/ru.png 2x" width="24" height="18" alt=""><span>Russie</span></li>
+              <li role="option" data-value="Biélorussie" data-iso="by" tabindex="-1"><img src="https://flagcdn.com/24x18/by.png" srcset="https://flagcdn.com/48x36/by.png 2x" width="24" height="18" alt=""><span>Biélorussie</span></li>
+              <li role="option" data-value="Malte" data-iso="mt" tabindex="-1"><img src="https://flagcdn.com/24x18/mt.png" srcset="https://flagcdn.com/48x36/mt.png 2x" width="24" height="18" alt=""><span>Malte</span></li>
+              <li role="option" data-value="Chypre" data-iso="cy" tabindex="-1"><img src="https://flagcdn.com/24x18/cy.png" srcset="https://flagcdn.com/48x36/cy.png 2x" width="24" height="18" alt=""><span>Chypre</span></li>
+              <li role="option" data-value="Albanie" data-iso="al" tabindex="-1"><img src="https://flagcdn.com/24x18/al.png" srcset="https://flagcdn.com/48x36/al.png 2x" width="24" height="18" alt=""><span>Albanie</span></li>
+              <li role="option" data-value="Bosnie-Herzégovine" data-iso="ba" tabindex="-1"><img src="https://flagcdn.com/24x18/ba.png" srcset="https://flagcdn.com/48x36/ba.png 2x" width="24" height="18" alt=""><span>Bosnie-Herzégovine</span></li>
+              <li role="option" data-value="Macédoine du Nord" data-iso="mk" tabindex="-1"><img src="https://flagcdn.com/24x18/mk.png" srcset="https://flagcdn.com/48x36/mk.png 2x" width="24" height="18" alt=""><span>Macédoine du Nord</span></li>
+              <li role="option" data-value="Monténégro" data-iso="me" tabindex="-1"><img src="https://flagcdn.com/24x18/me.png" srcset="https://flagcdn.com/48x36/me.png 2x" width="24" height="18" alt=""><span>Monténégro</span></li>
+              <li role="option" data-value="Slovénie" data-iso="si" tabindex="-1"><img src="https://flagcdn.com/24x18/si.png" srcset="https://flagcdn.com/48x36/si.png 2x" width="24" height="18" alt=""><span>Slovénie</span></li>
+              <li role="option" data-value="Estonie" data-iso="ee" tabindex="-1"><img src="https://flagcdn.com/24x18/ee.png" srcset="https://flagcdn.com/48x36/ee.png 2x" width="24" height="18" alt=""><span>Estonie</span></li>
+              <li role="option" data-value="Lettonie" data-iso="lv" tabindex="-1"><img src="https://flagcdn.com/24x18/lv.png" srcset="https://flagcdn.com/48x36/lv.png 2x" width="24" height="18" alt=""><span>Lettonie</span></li>
+              <li role="option" data-value="Lituanie" data-iso="lt" tabindex="-1"><img src="https://flagcdn.com/24x18/lt.png" srcset="https://flagcdn.com/48x36/lt.png 2x" width="24" height="18" alt=""><span>Lituanie</span></li>
+              <li role="option" data-value="Moldavie" data-iso="md" tabindex="-1"><img src="https://flagcdn.com/24x18/md.png" srcset="https://flagcdn.com/48x36/md.png 2x" width="24" height="18" alt=""><span>Moldavie</span></li>
+              <li role="option" data-value="Monaco" data-iso="mc" tabindex="-1"><img src="https://flagcdn.com/24x18/mc.png" srcset="https://flagcdn.com/48x36/mc.png 2x" width="24" height="18" alt=""><span>Monaco</span></li>
+              <li role="option" data-value="Andorre" data-iso="ad" tabindex="-1"><img src="https://flagcdn.com/24x18/ad.png" srcset="https://flagcdn.com/48x36/ad.png 2x" width="24" height="18" alt=""><span>Andorre</span></li>
+              <li role="option" data-value="Sénégal" data-iso="sn" tabindex="-1"><img src="https://flagcdn.com/24x18/sn.png" srcset="https://flagcdn.com/48x36/sn.png 2x" width="24" height="18" alt=""><span>Sénégal</span></li>
+              <li role="option" data-value="Côte d'Ivoire" data-iso="ci" tabindex="-1"><img src="https://flagcdn.com/24x18/ci.png" srcset="https://flagcdn.com/48x36/ci.png 2x" width="24" height="18" alt=""><span>Côte d'Ivoire</span></li>
+              <li role="option" data-value="Mali" data-iso="ml" tabindex="-1"><img src="https://flagcdn.com/24x18/ml.png" srcset="https://flagcdn.com/48x36/ml.png 2x" width="24" height="18" alt=""><span>Mali</span></li>
+              <li role="option" data-value="Cameroun" data-iso="cm" tabindex="-1"><img src="https://flagcdn.com/24x18/cm.png" srcset="https://flagcdn.com/48x36/cm.png 2x" width="24" height="18" alt=""><span>Cameroun</span></li>
+              <li role="option" data-value="Niger" data-iso="ne" tabindex="-1"><img src="https://flagcdn.com/24x18/ne.png" srcset="https://flagcdn.com/48x36/ne.png 2x" width="24" height="18" alt=""><span>Niger</span></li>
+              <li role="option" data-value="Tchad" data-iso="td" tabindex="-1"><img src="https://flagcdn.com/24x18/td.png" srcset="https://flagcdn.com/48x36/td.png 2x" width="24" height="18" alt=""><span>Tchad</span></li>
+              <li role="option" data-value="Guinée" data-iso="gn" tabindex="-1"><img src="https://flagcdn.com/24x18/gn.png" srcset="https://flagcdn.com/48x36/gn.png 2x" width="24" height="18" alt=""><span>Guinée</span></li>
+              <li role="option" data-value="Burkina Faso" data-iso="bf" tabindex="-1"><img src="https://flagcdn.com/24x18/bf.png" srcset="https://flagcdn.com/48x36/bf.png 2x" width="24" height="18" alt=""><span>Burkina Faso</span></li>
+              <li role="option" data-value="Togo" data-iso="tg" tabindex="-1"><img src="https://flagcdn.com/24x18/tg.png" srcset="https://flagcdn.com/48x36/tg.png 2x" width="24" height="18" alt=""><span>Togo</span></li>
+              <li role="option" data-value="Bénin" data-iso="bj" tabindex="-1"><img src="https://flagcdn.com/24x18/bj.png" srcset="https://flagcdn.com/48x36/bj.png 2x" width="24" height="18" alt=""><span>Bénin</span></li>
+              <li role="option" data-value="RD Congo" data-iso="cd" tabindex="-1"><img src="https://flagcdn.com/24x18/cd.png" srcset="https://flagcdn.com/48x36/cd.png 2x" width="24" height="18" alt=""><span>RD Congo</span></li>
+              <li role="option" data-value="Congo" data-iso="cg" tabindex="-1"><img src="https://flagcdn.com/24x18/cg.png" srcset="https://flagcdn.com/48x36/cg.png 2x" width="24" height="18" alt=""><span>Congo</span></li>
+              <li role="option" data-value="Gabon" data-iso="ga" tabindex="-1"><img src="https://flagcdn.com/24x18/ga.png" srcset="https://flagcdn.com/48x36/ga.png 2x" width="24" height="18" alt=""><span>Gabon</span></li>
+              <li role="option" data-value="Madagascar" data-iso="mg" tabindex="-1"><img src="https://flagcdn.com/24x18/mg.png" srcset="https://flagcdn.com/48x36/mg.png 2x" width="24" height="18" alt=""><span>Madagascar</span></li>
+              <li role="option" data-value="Comores" data-iso="km" tabindex="-1"><img src="https://flagcdn.com/24x18/km.png" srcset="https://flagcdn.com/48x36/km.png 2x" width="24" height="18" alt=""><span>Comores</span></li>
+              <li role="option" data-value="Djibouti" data-iso="dj" tabindex="-1"><img src="https://flagcdn.com/24x18/dj.png" srcset="https://flagcdn.com/48x36/dj.png 2x" width="24" height="18" alt=""><span>Djibouti</span></li>
+              <li role="option" data-value="Ghana" data-iso="gh" tabindex="-1"><img src="https://flagcdn.com/24x18/gh.png" srcset="https://flagcdn.com/48x36/gh.png 2x" width="24" height="18" alt=""><span>Ghana</span></li>
+              <li role="option" data-value="Nigeria" data-iso="ng" tabindex="-1"><img src="https://flagcdn.com/24x18/ng.png" srcset="https://flagcdn.com/48x36/ng.png 2x" width="24" height="18" alt=""><span>Nigeria</span></li>
+              <li role="option" data-value="Kenya" data-iso="ke" tabindex="-1"><img src="https://flagcdn.com/24x18/ke.png" srcset="https://flagcdn.com/48x36/ke.png 2x" width="24" height="18" alt=""><span>Kenya</span></li>
+              <li role="option" data-value="Éthiopie" data-iso="et" tabindex="-1"><img src="https://flagcdn.com/24x18/et.png" srcset="https://flagcdn.com/48x36/et.png 2x" width="24" height="18" alt=""><span>Éthiopie</span></li>
+              <li role="option" data-value="Afrique du Sud" data-iso="za" tabindex="-1"><img src="https://flagcdn.com/24x18/za.png" srcset="https://flagcdn.com/48x36/za.png 2x" width="24" height="18" alt=""><span>Afrique du Sud</span></li>
+              <li role="option" data-value="Rwanda" data-iso="rw" tabindex="-1"><img src="https://flagcdn.com/24x18/rw.png" srcset="https://flagcdn.com/48x36/rw.png 2x" width="24" height="18" alt=""><span>Rwanda</span></li>
+              <li role="option" data-value="Cap-Vert" data-iso="cv" tabindex="-1"><img src="https://flagcdn.com/24x18/cv.png" srcset="https://flagcdn.com/48x36/cv.png 2x" width="24" height="18" alt=""><span>Cap-Vert</span></li>
+              <li role="option" data-value="Guinée équatoriale" data-iso="gq" tabindex="-1"><img src="https://flagcdn.com/24x18/gq.png" srcset="https://flagcdn.com/48x36/gq.png 2x" width="24" height="18" alt=""><span>Guinée équatoriale</span></li>
+              <li role="option" data-value="Maurice" data-iso="mu" tabindex="-1"><img src="https://flagcdn.com/24x18/mu.png" srcset="https://flagcdn.com/48x36/mu.png 2x" width="24" height="18" alt=""><span>Maurice</span></li>
+              <li role="option" data-value="Seychelles" data-iso="sc" tabindex="-1"><img src="https://flagcdn.com/24x18/sc.png" srcset="https://flagcdn.com/48x36/sc.png 2x" width="24" height="18" alt=""><span>Seychelles</span></li>
+              <li role="option" data-value="Turquie" data-iso="tr" tabindex="-1"><img src="https://flagcdn.com/24x18/tr.png" srcset="https://flagcdn.com/48x36/tr.png 2x" width="24" height="18" alt=""><span>Turquie</span></li>
+              <li role="option" data-value="Liban" data-iso="lb" tabindex="-1"><img src="https://flagcdn.com/24x18/lb.png" srcset="https://flagcdn.com/48x36/lb.png 2x" width="24" height="18" alt=""><span>Liban</span></li>
+              <li role="option" data-value="Syrie" data-iso="sy" tabindex="-1"><img src="https://flagcdn.com/24x18/sy.png" srcset="https://flagcdn.com/48x36/sy.png 2x" width="24" height="18" alt=""><span>Syrie</span></li>
+              <li role="option" data-value="Arabie saoudite" data-iso="sa" tabindex="-1"><img src="https://flagcdn.com/24x18/sa.png" srcset="https://flagcdn.com/48x36/sa.png 2x" width="24" height="18" alt=""><span>Arabie saoudite</span></li>
+              <li role="option" data-value="Émirats arabes unis" data-iso="ae" tabindex="-1"><img src="https://flagcdn.com/24x18/ae.png" srcset="https://flagcdn.com/48x36/ae.png 2x" width="24" height="18" alt=""><span>Émirats arabes unis</span></li>
+              <li role="option" data-value="Qatar" data-iso="qa" tabindex="-1"><img src="https://flagcdn.com/24x18/qa.png" srcset="https://flagcdn.com/48x36/qa.png 2x" width="24" height="18" alt=""><span>Qatar</span></li>
+              <li role="option" data-value="Koweït" data-iso="kw" tabindex="-1"><img src="https://flagcdn.com/24x18/kw.png" srcset="https://flagcdn.com/48x36/kw.png 2x" width="24" height="18" alt=""><span>Koweït</span></li>
+              <li role="option" data-value="Oman" data-iso="om" tabindex="-1"><img src="https://flagcdn.com/24x18/om.png" srcset="https://flagcdn.com/48x36/om.png 2x" width="24" height="18" alt=""><span>Oman</span></li>
+              <li role="option" data-value="Bahreïn" data-iso="bh" tabindex="-1"><img src="https://flagcdn.com/24x18/bh.png" srcset="https://flagcdn.com/48x36/bh.png 2x" width="24" height="18" alt=""><span>Bahreïn</span></li>
+              <li role="option" data-value="Irak" data-iso="iq" tabindex="-1"><img src="https://flagcdn.com/24x18/iq.png" srcset="https://flagcdn.com/48x36/iq.png 2x" width="24" height="18" alt=""><span>Irak</span></li>
+              <li role="option" data-value="Jordanie" data-iso="jo" tabindex="-1"><img src="https://flagcdn.com/24x18/jo.png" srcset="https://flagcdn.com/48x36/jo.png 2x" width="24" height="18" alt=""><span>Jordanie</span></li>
+              <li role="option" data-value="Palestine" data-iso="ps" tabindex="-1"><img src="https://flagcdn.com/24x18/ps.png" srcset="https://flagcdn.com/48x36/ps.png 2x" width="24" height="18" alt=""><span>Palestine</span></li>
+              <li role="option" data-value="Yémen" data-iso="ye" tabindex="-1"><img src="https://flagcdn.com/24x18/ye.png" srcset="https://flagcdn.com/48x36/ye.png 2x" width="24" height="18" alt=""><span>Yémen</span></li>
+              <li role="option" data-value="Iran" data-iso="ir" tabindex="-1"><img src="https://flagcdn.com/24x18/ir.png" srcset="https://flagcdn.com/48x36/ir.png 2x" width="24" height="18" alt=""><span>Iran</span></li>
+              <li role="option" data-value="Israël" data-iso="il" tabindex="-1"><img src="https://flagcdn.com/24x18/il.png" srcset="https://flagcdn.com/48x36/il.png 2x" width="24" height="18" alt=""><span>Israël</span></li>
+              <li role="option" data-value="États-Unis" data-iso="us" tabindex="-1"><img src="https://flagcdn.com/24x18/us.png" srcset="https://flagcdn.com/48x36/us.png 2x" width="24" height="18" alt=""><span>États-Unis</span></li>
+              <li role="option" data-value="Canada" data-iso="ca" tabindex="-1"><img src="https://flagcdn.com/24x18/ca.png" srcset="https://flagcdn.com/48x36/ca.png 2x" width="24" height="18" alt=""><span>Canada</span></li>
+              <li role="option" data-value="Mexique" data-iso="mx" tabindex="-1"><img src="https://flagcdn.com/24x18/mx.png" srcset="https://flagcdn.com/48x36/mx.png 2x" width="24" height="18" alt=""><span>Mexique</span></li>
+              <li role="option" data-value="Brésil" data-iso="br" tabindex="-1"><img src="https://flagcdn.com/24x18/br.png" srcset="https://flagcdn.com/48x36/br.png 2x" width="24" height="18" alt=""><span>Brésil</span></li>
+              <li role="option" data-value="Argentine" data-iso="ar" tabindex="-1"><img src="https://flagcdn.com/24x18/ar.png" srcset="https://flagcdn.com/48x36/ar.png 2x" width="24" height="18" alt=""><span>Argentine</span></li>
+              <li role="option" data-value="Chili" data-iso="cl" tabindex="-1"><img src="https://flagcdn.com/24x18/cl.png" srcset="https://flagcdn.com/48x36/cl.png 2x" width="24" height="18" alt=""><span>Chili</span></li>
+              <li role="option" data-value="Colombie" data-iso="co" tabindex="-1"><img src="https://flagcdn.com/24x18/co.png" srcset="https://flagcdn.com/48x36/co.png 2x" width="24" height="18" alt=""><span>Colombie</span></li>
+              <li role="option" data-value="Pérou" data-iso="pe" tabindex="-1"><img src="https://flagcdn.com/24x18/pe.png" srcset="https://flagcdn.com/48x36/pe.png 2x" width="24" height="18" alt=""><span>Pérou</span></li>
+              <li role="option" data-value="Venezuela" data-iso="ve" tabindex="-1"><img src="https://flagcdn.com/24x18/ve.png" srcset="https://flagcdn.com/48x36/ve.png 2x" width="24" height="18" alt=""><span>Venezuela</span></li>
+              <li role="option" data-value="Cuba" data-iso="cu" tabindex="-1"><img src="https://flagcdn.com/24x18/cu.png" srcset="https://flagcdn.com/48x36/cu.png 2x" width="24" height="18" alt=""><span>Cuba</span></li>
+              <li role="option" data-value="Haïti" data-iso="ht" tabindex="-1"><img src="https://flagcdn.com/24x18/ht.png" srcset="https://flagcdn.com/48x36/ht.png 2x" width="24" height="18" alt=""><span>Haïti</span></li>
+              <li role="option" data-value="République dominicaine" data-iso="do" tabindex="-1"><img src="https://flagcdn.com/24x18/do.png" srcset="https://flagcdn.com/48x36/do.png 2x" width="24" height="18" alt=""><span>République dominicaine</span></li>
+              <li role="option" data-value="Chine" data-iso="cn" tabindex="-1"><img src="https://flagcdn.com/24x18/cn.png" srcset="https://flagcdn.com/48x36/cn.png 2x" width="24" height="18" alt=""><span>Chine</span></li>
+              <li role="option" data-value="Japon" data-iso="jp" tabindex="-1"><img src="https://flagcdn.com/24x18/jp.png" srcset="https://flagcdn.com/48x36/jp.png 2x" width="24" height="18" alt=""><span>Japon</span></li>
+              <li role="option" data-value="Corée du Sud" data-iso="kr" tabindex="-1"><img src="https://flagcdn.com/24x18/kr.png" srcset="https://flagcdn.com/48x36/kr.png 2x" width="24" height="18" alt=""><span>Corée du Sud</span></li>
+              <li role="option" data-value="Inde" data-iso="in" tabindex="-1"><img src="https://flagcdn.com/24x18/in.png" srcset="https://flagcdn.com/48x36/in.png 2x" width="24" height="18" alt=""><span>Inde</span></li>
+              <li role="option" data-value="Pakistan" data-iso="pk" tabindex="-1"><img src="https://flagcdn.com/24x18/pk.png" srcset="https://flagcdn.com/48x36/pk.png 2x" width="24" height="18" alt=""><span>Pakistan</span></li>
+              <li role="option" data-value="Bangladesh" data-iso="bd" tabindex="-1"><img src="https://flagcdn.com/24x18/bd.png" srcset="https://flagcdn.com/48x36/bd.png 2x" width="24" height="18" alt=""><span>Bangladesh</span></li>
+              <li role="option" data-value="Indonésie" data-iso="id" tabindex="-1"><img src="https://flagcdn.com/24x18/id.png" srcset="https://flagcdn.com/48x36/id.png 2x" width="24" height="18" alt=""><span>Indonésie</span></li>
+              <li role="option" data-value="Malaisie" data-iso="my" tabindex="-1"><img src="https://flagcdn.com/24x18/my.png" srcset="https://flagcdn.com/48x36/my.png 2x" width="24" height="18" alt=""><span>Malaisie</span></li>
+              <li role="option" data-value="Singapour" data-iso="sg" tabindex="-1"><img src="https://flagcdn.com/24x18/sg.png" srcset="https://flagcdn.com/48x36/sg.png 2x" width="24" height="18" alt=""><span>Singapour</span></li>
+              <li role="option" data-value="Thaïlande" data-iso="th" tabindex="-1"><img src="https://flagcdn.com/24x18/th.png" srcset="https://flagcdn.com/48x36/th.png 2x" width="24" height="18" alt=""><span>Thaïlande</span></li>
+              <li role="option" data-value="Vietnam" data-iso="vn" tabindex="-1"><img src="https://flagcdn.com/24x18/vn.png" srcset="https://flagcdn.com/48x36/vn.png 2x" width="24" height="18" alt=""><span>Vietnam</span></li>
+              <li role="option" data-value="Philippines" data-iso="ph" tabindex="-1"><img src="https://flagcdn.com/24x18/ph.png" srcset="https://flagcdn.com/48x36/ph.png 2x" width="24" height="18" alt=""><span>Philippines</span></li>
+              <li role="option" data-value="Afghanistan" data-iso="af" tabindex="-1"><img src="https://flagcdn.com/24x18/af.png" srcset="https://flagcdn.com/48x36/af.png 2x" width="24" height="18" alt=""><span>Afghanistan</span></li>
+              <li role="option" data-value="Kazakhstan" data-iso="kz" tabindex="-1"><img src="https://flagcdn.com/24x18/kz.png" srcset="https://flagcdn.com/48x36/kz.png 2x" width="24" height="18" alt=""><span>Kazakhstan</span></li>
+              <li role="option" data-value="Australie" data-iso="au" tabindex="-1"><img src="https://flagcdn.com/24x18/au.png" srcset="https://flagcdn.com/48x36/au.png 2x" width="24" height="18" alt=""><span>Australie</span></li>
+              <li role="option" data-value="Nouvelle-Zélande" data-iso="nz" tabindex="-1"><img src="https://flagcdn.com/24x18/nz.png" srcset="https://flagcdn.com/48x36/nz.png 2x" width="24" height="18" alt=""><span>Nouvelle-Zélande</span></li>
+          </ul>
+          <input type="hidden" id="pCountryValue" required>
+        </div>
+      </div>
+      <button type="submit" class="btn btn-primary form-submit"><span>Commencer à jouer</span></button>
+      <p class="form-feedback" id="playerGateFeedback" role="status" aria-live="polite"></p>
+    </form>
+  </div>
+</div>
+<script>
+  if (localStorage.getItem('ezzahra_puzzle_name') && localStorage.getItem('ezzahra_puzzle_country')) {
+    document.getElementById('playerGate').style.display = 'none';
+  } else {
+    document.body.classList.add('gate-active');
+  }
+</script>
+
+<header class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="brand">Ezzahra</a>
+    <nav class="nav-links" id="navLinks">
+      <a href="index.html">Accueil</a>
+      <a href="menu.html">Menu</a>
+      <a href="galerie.html">Galerie</a>
+      <a href="puzzle.html" class="is-active">Jeu</a>
+      <a href="nous-trouver.html">Nous trouver</a>
+    </nav>
+    <a href="tel:+33556929118" class="btn btn-ghost nav-call">05 56 92 91 18</a>
+    <button class="burger" id="burger" aria-label="Ouvrir le menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main>
+
+  <section class="puzzle-intro reveal">
+    <div class="puzzle-intro-inner">
+      <p class="eyebrow" style="text-align:center;">JOUEZ ET GRIMPEZ AU CLASSEMENT</p>
+      <h1>Reconstituez la façade Ezzahra</h1>
+      <p>5 niveaux, du plus simple au plus corsé. Choisissez un niveau pour commencer — les suivants se débloquent au fur et à mesure.</p>
+    </div>
+  </section>
+
+  <div class="stats-error" id="imageWarning" style="display:none; max-width:640px; margin:0 auto 2rem;">
+    L'image du puzzle ne se charge pas depuis cet appareil. Vérifiez que le fichier <code>puzzle-ezzahra.jpg</code> est bien présent, avec exactement ce nom.
+  </div>
+
+  <!-- LEVEL SELECT -->
+  <section class="level-section" id="levelSection">
+    <div class="level-grid" id="levelGrid">
+      <div class="level-card" data-level="1">
+        <span class="level-num">1</span>
+        <p class="level-label">Facile</p>
+        <p class="level-grid-size">3 &times; 3 · 9 pièces</p>
+        <p class="level-best" data-best="1"></p>
+      </div>
+      <div class="level-card is-locked" data-level="2">
+        <svg class="level-lock-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="4" y="10" width="16" height="10" rx="1.5"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>
+        <span class="level-num">2</span>
+        <p class="level-label">Moyen</p>
+        <p class="level-grid-size">4 &times; 4 · 16 pièces</p>
+        <p class="level-best" data-best="2"></p>
+      </div>
+      <div class="level-card is-locked" data-level="3">
+        <svg class="level-lock-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="4" y="10" width="16" height="10" rx="1.5"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>
+        <span class="level-num">3</span>
+        <p class="level-label">Moyen +</p>
+        <p class="level-grid-size">5 &times; 5 · 25 pièces</p>
+        <p class="level-best" data-best="3"></p>
+      </div>
+      <div class="level-card is-locked" data-level="4">
+        <svg class="level-lock-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="4" y="10" width="16" height="10" rx="1.5"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>
+        <span class="level-num">4</span>
+        <p class="level-label">Difficile</p>
+        <p class="level-grid-size">6 &times; 6 · 36 pièces</p>
+        <p class="level-best" data-best="4"></p>
+      </div>
+      <div class="level-card is-locked" data-level="5">
+        <svg class="level-lock-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="4" y="10" width="16" height="10" rx="1.5"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>
+        <span class="level-num">5</span>
+        <p class="level-label">Expert</p>
+        <p class="level-grid-size">8 &times; 8 · 64 pièces</p>
+        <p class="level-best" data-best="5"></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- GAME -->
+  <section class="game-section" id="gameSection">
+    <div class="game-wrap">
+      <div class="game-toolbar">
+        <span class="game-stat">Temps <strong id="gameTimer">00:00</strong></span>
+        <span class="game-stat">Coups <strong id="gameMoves">0</strong></span>
+        <div class="game-actions">
+          <button class="icon-btn" id="soundBtn" aria-label="Activer/couper le son" title="Son">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" id="soundIconOn"><path d="M11 5 6 9H3v6h3l5 4V5Z"/><path d="M15.5 8.5a5 5 0 0 1 0 7M18.5 6a9 9 0 0 1 0 12"/></svg>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" id="soundIconOff" style="display:none;"><path d="M11 5 6 9H3v6h3l5 4V5Z"/><path d="m16 9 5 6M21 9l-5 6"/></svg>
+          </button>
+          <button class="icon-btn" id="previewBtn" aria-label="Voir l'image" title="Voir l'image">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg>
+          </button>
+          <button class="icon-btn" id="shuffleBtn" aria-label="Mélanger" title="Mélanger">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 4h4l10 16h4M4 20h4l3-4.8M18 4h4v4M14 8.5 16.5 5M22 16v4h-4"/></svg>
+          </button>
+        </div>
+      </div>
+      <div class="game-layout">
+        <div class="puzzle-board-wrap">
+          <div class="puzzle-board" id="puzzleBoard"></div>
+          <div class="puzzle-preview" id="puzzlePreview"></div>
+        </div>
+        <div class="reference-panel">
+          <p class="reference-label">Image de référence</p>
+          <img class="reference-img" src="puzzle-ezzahra.jpg" alt="Image de référence à reconstituer">
+        </div>
+      </div>
+      <button class="back-to-levels" id="backToLevels">&larr; Retour aux niveaux</button>
+    </div>
+  </section>
+
+  <!-- LEADERBOARD -->
+  <section class="leaderboard-section">
+    <div class="leaderboard-inner">
+      <div class="testimonials-head reveal">
+        <p class="eyebrow">TOP 5</p>
+        <h2>Meilleurs joueurs</h2>
+      </div>
+      <div class="lb-list" id="lbList"></div>
+      <div class="stats-empty" id="lbEmpty" style="display:none; margin-top:1.5rem;">Personne n'a encore terminé de niveau — soyez le premier au classement !</div>
+      <div class="stats-error" id="lbError" style="display:none; margin-top:1.5rem;">
+        Classement pas encore connecté. Ouvrez <code>puzzle.js</code> et renseignez <code>SHEET_CSV_URL</code> en haut du fichier.
+      </div>
+    </div>
+  </section>
+
+  <!-- COUNTRY STATS -->
+  <section class="stats-section" style="background:var(--paper-dim);">
+    <div class="stats-inner">
+      <div class="testimonials-head reveal">
+        <p class="eyebrow">STATISTIQUES</p>
+        <h2>D'où viennent nos joueurs</h2>
+      </div>
+      <div class="stats-summary reveal" id="pcStatsSummary" style="display:none;">
+        <div class="stats-summary-card">
+          <span class="num" id="pcStatTotal">0</span>
+          <span class="lbl">Parties terminées</span>
+        </div>
+        <div class="stats-summary-card">
+          <span class="num" id="pcStatCountries">0</span>
+          <span class="lbl">Pays représentés</span>
+        </div>
+        <div class="stats-summary-card">
+          <span class="num" id="pcStatTop">—</span>
+          <span class="lbl">Pays n&deg;1</span>
+        </div>
+      </div>
+      <div class="stat-list" id="pcStatList"></div>
+      <div class="stats-empty" id="pcStatsEmpty" style="display:none;">Pas encore de données pays.</div>
+    </div>
+  </section>
+
+</main>
+
+<!-- WIN MODAL -->
+<div class="win-modal" id="winModal">
+  <div class="win-card" id="winCard">
+    <p class="win-title">Bravo ! 🎉</p>
+    <p class="win-stats" id="winStats"></p>
+    <div class="win-actions">
+      <button class="btn btn-primary" id="nextLevelBtn">Niveau suivant</button>
+      <button class="btn btn-outline" id="shareScoreBtn">Partager mon score</button>
+      <a href="nous-trouver.html" class="btn btn-outline">Réserver une table chez Ezzahra</a>
+      <button class="entry-gate-skip" id="closeWinBtn">Retour aux niveaux</button>
+    </div>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <span class="brand brand-small">Ezzahra</span>
+    <span>236 Cours de la Marne, 33800 Bordeaux · 05 56 92 91 18</span>
+    <a href="https://maps.app.goo.gl/a5rhHqk5ih8BwgX77?g_st=ac" target="_blank" rel="noopener" style="color:var(--gold);">Voir sur Google Maps</a>
+    <span>&copy; <span id="year"></span> Ezzahra</span>
+  </div>
+</footer>
+
+<a href="tel:+33556929118" class="fab-call" id="fabCall" aria-label="Appeler Ezzahra">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+</a>
+
+<script src="script.js" defer></script>
+<script src="puzzle.js" defer></script>
+</body>
+</html>
